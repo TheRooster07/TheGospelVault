@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Gospel Vault</title>
+<meta name="description" content="Get in touch with The Gospel Vault, or join the email list to hear about new devotionals and studies as they're published.">
+<link rel="canonical" href="https://thegospelvault.com/contact.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Gospel Vault">
+<meta property="og:title" content="Contact | The Gospel Vault">
+<meta property="og:description" content="Get in touch, or join the email list to hear about new devotionals and studies.">
+<meta property="og:url" content="https://thegospelvault.com/contact.html">
+<meta property="og:image" content="https://thegospelvault.com/assets/og-image.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | The Gospel Vault">
+<meta name="twitter:description" content="Get in touch, or join the email list to hear about new devotionals and studies.">
+<meta name="twitter:image" content="https://thegospelvault.com/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact The Gospel Vault",
+  "url": "https://thegospelvault.com/contact.html",
+  "isPartOf": { "@type": "WebSite", "name": "The Gospel Vault", "url": "https://thegospelvault.com/" }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">The Gospel <span>Vault</span></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <details>
+            <summary>Start Here</summary>
+            <ul class="dropdown-menu">
+              <li><a href="new-believer/index.html">New Believer: Overview</a></li>
+              <li><a href="new-believer/day-1.html">Day 1 &mdash; Foundation</a></li>
+              <li><a href="new-believer/day-2.html">Day 2 &mdash; Ask</a></li>
+              <li><a href="new-believer/day-3.html">Day 3 &mdash; Input</a></li>
+              <li><a href="new-believer/day-4.html">Day 4 &mdash; Together</a></li>
+              <li><a href="new-believer/day-5.html">Day 5 &mdash; Helper</a></li>
+              <li class="pdf-link"><a href="new-believer/new-believer-faith-devotional.pdf">Download PDF</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="vault.html">Vault</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h1>Get In Touch</h1>
+    <p class="lead">Questions, feedback, or just want to say hello — reach out below, or join the email
+    list to hear when new devotionals go up.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="notice">
+      Prefer email? Reach out directly at
+      <!-- Replace with your real inbox — this is a placeholder. -->
+      <a href="mailto:hello@thegospelvault.com">hello@thegospelvault.com</a>.
+    </div>
+
+    <!--
+      This form needs a submission backend before it will actually deliver messages —
+      GitHub Pages can't process form posts on its own. Two easy options:
+        1. Formspree (formspree.io) — free tier, just point the form's action at your
+           Formspree endpoint and add name="..." attributes they read automatically.
+        2. Netlify Forms — only works if the site is hosted on Netlify instead of Pages.
+      Until one of those is wired up, this form won't send anywhere.
+    -->
+    <form action="#" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="form-row" style="text-align:center;">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">This form isn't connected to an inbox yet — email the address above in the
+        meantime.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Stay Connected</span>
+      <h2>Join the Email List</h2>
+    </div>
+    <!--
+      Same note as above: this needs an email-list provider (Mailchimp, ConvertKit,
+      Buttondown, etc.) to actually collect addresses. Swap this form's action/fields
+      for the embed code your provider gives you.
+    -->
+    <form action="#" method="POST" style="max-width:480px;">
+      <div class="form-row">
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" name="signup-email" required>
+      </div>
+      <div class="form-row" style="text-align:center;">
+        <button type="submit" class="btn btn-secondary">Subscribe</button>
+        <p class="form-note">One email whenever a new devotional or study is published. No spam.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vault.html">Vault</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p>Copyright &copy; 2026 The Gospel Vault. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
