@@ -81,19 +81,19 @@
   <div class="container">
     <div class="notice">
       Prefer email? Reach out directly at
-      <!-- Replace with your real inbox — this is a placeholder. -->
-      <a href="mailto:hello@thegospelvault.com">hello@thegospelvault.com</a>.
+      <a href="mailto:Brcrow01mission@gmail.com">Brcrow01mission@gmail.com</a>.
     </div>
 
     <!--
-      This form needs a submission backend before it will actually deliver messages —
-      GitHub Pages can't process form posts on its own. Two easy options:
-        1. Formspree (formspree.io) — free tier, just point the form's action at your
-           Formspree endpoint and add name="..." attributes they read automatically.
-        2. Netlify Forms — only works if the site is hosted on Netlify instead of Pages.
-      Until one of those is wired up, this form won't send anywhere.
+      No server backend here on purpose — this opens the visitor's own email app
+      (mailto:) with the message pre-filled, addressed to Brcrow01mission@gmail.com.
+      Nothing is stored or sent from the site itself, so there's nothing to host or pay for.
+      One limitation: it only works if the visitor has a desktop email client configured
+      (Outlook, Mail, etc.) — on some phones/browsers with no mail app set up, nothing
+      will happen when they click Send. If that becomes a problem later, swap this for
+      a service like Formspree so the message posts directly instead.
     -->
-    <form action="#" method="POST">
+    <form id="contact-form">
       <div class="form-row">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -108,8 +108,8 @@
       </div>
       <div class="form-row" style="text-align:center;">
         <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-note">This form isn't connected to an inbox yet — email the address above in the
-        meantime.</p>
+        <p class="form-note">Clicking Send opens your email app with this filled in — just hit send from
+        there.</p>
       </div>
     </form>
   </div>
@@ -122,18 +122,22 @@
       <h2>Join the Email List</h2>
     </div>
     <!--
-      Same note as above: this needs an email-list provider (Mailchimp, ConvertKit,
-      Buttondown, etc.) to actually collect addresses. Swap this form's action/fields
-      for the embed code your provider gives you.
+      Same mailto: approach as the contact form above — clicking Subscribe opens the
+      visitor's email app with a pre-filled message asking to be added, addressed to
+      Brcrow01mission@gmail.com. You'll add them to your list by hand on your end.
+      When/if you want real self-serve signups (no manual work on your part), swap this
+      for a provider like Mailchimp, ConvertKit, or Buttondown and paste in their embed
+      code instead.
     -->
-    <form action="#" method="POST" style="max-width:480px;">
+    <form id="signup-form" style="max-width:480px;">
       <div class="form-row">
         <label for="signup-email">Email address</label>
         <input type="email" id="signup-email" name="signup-email" required>
       </div>
       <div class="form-row" style="text-align:center;">
         <button type="submit" class="btn btn-secondary">Subscribe</button>
-        <p class="form-note">One email whenever a new devotional or study is published. No spam.</p>
+        <p class="form-note">Clicking Subscribe opens your email app so you can send us your address
+        directly. No spam.</p>
       </div>
     </form>
   </div>
@@ -154,5 +158,24 @@
 </footer>
 
 <script src="js/nav.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = 'Message from ' + name + ' — The Gospel Vault';
+    var body = message + '\n\n— ' + name + ' (' + email + ')';
+    window.location.href = 'mailto:Brcrow01mission@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('signup-email').value;
+    var subject = 'Newsletter signup — The Gospel Vault';
+    var body = 'Please add me to the email list: ' + email;
+    window.location.href = 'mailto:Brcrow01mission@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
 </body>
 </html>
