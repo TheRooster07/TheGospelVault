@@ -79,21 +79,16 @@
 
 <section>
   <div class="container">
-    <div class="notice">
-      Prefer email? Reach out directly at
-      <a href="mailto:Brcrow01mission@gmail.com">Brcrow01mission@gmail.com</a>.
-    </div>
-
     <!--
-      No server backend here on purpose — this opens the visitor's own email app
-      (mailto:) with the message pre-filled, addressed to Brcrow01mission@gmail.com.
-      Nothing is stored or sent from the site itself, so there's nothing to host or pay for.
-      One limitation: it only works if the visitor has a desktop email client configured
-      (Outlook, Mail, etc.) — on some phones/browsers with no mail app set up, nothing
-      will happen when they click Send. If that becomes a problem later, swap this for
-      a service like Formspree so the message posts directly instead.
+      Submits via Formspree (https://formspree.io/f/mbgraalp) — your real inbox never
+      appears anywhere in this page's source. Both this form and the newsletter form
+      below share the same Formspree endpoint, so both land in the same dashboard;
+      the hidden _subject fields make it easy to tell them apart at a glance.
+      Handled with fetch() in the script at the bottom so the page doesn't reload —
+      visitors see an inline "message sent" confirmation instead of leaving the site.
     -->
-    <form id="contact-form">
+    <form id="contact-form" action="https://formspree.io/f/mbgraalp" method="POST">
+      <input type="hidden" name="_subject" value="New message — The Gospel Vault contact form">
       <div class="form-row">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -108,8 +103,7 @@
       </div>
       <div class="form-row" style="text-align:center;">
         <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-note">Clicking Send opens your email app with this filled in — just hit send from
-        there.</p>
+        <p class="form-note">We'll reply to the email address you enter above.</p>
       </div>
     </form>
   </div>
@@ -122,22 +116,21 @@
       <h2>Join the Email List</h2>
     </div>
     <!--
-      Same mailto: approach as the contact form above — clicking Subscribe opens the
-      visitor's email app with a pre-filled message asking to be added, addressed to
-      Brcrow01mission@gmail.com. You'll add them to your list by hand on your end.
-      When/if you want real self-serve signups (no manual work on your part), swap this
-      for a provider like Mailchimp, ConvertKit, or Buttondown and paste in their embed
-      code instead.
+      Same Formspree endpoint as the contact form above, distinguished by its own
+      _subject line. This just gets you an email whenever someone signs up — you'll
+      still be adding them to a mailing list by hand. If you later want fully
+      automated list-building, swap this for a provider like Mailchimp, ConvertKit,
+      or Buttondown and paste in their embed code instead.
     -->
-    <form id="signup-form" style="max-width:480px;">
+    <form id="signup-form" action="https://formspree.io/f/mbgraalp" method="POST" style="max-width:480px;">
+      <input type="hidden" name="_subject" value="Newsletter signup — The Gospel Vault">
       <div class="form-row">
         <label for="signup-email">Email address</label>
-        <input type="email" id="signup-email" name="signup-email" required>
+        <input type="email" id="signup-email" name="email" required>
       </div>
       <div class="form-row" style="text-align:center;">
         <button type="submit" class="btn btn-secondary">Subscribe</button>
-        <p class="form-note">Clicking Subscribe opens your email app so you can send us your address
-        directly. No spam.</p>
+        <p class="form-note">One email whenever a new devotional or study is published. No spam.</p>
       </div>
     </form>
   </div>
@@ -159,23 +152,40 @@
 
 <script src="js/nav.js"></script>
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var subject = 'Message from ' + name + ' — The Gospel Vault';
-    var body = message + '\n\n— ' + name + ' (' + email + ')';
-    window.location.href = 'mailto:Brcrow01mission@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  });
+  function wireFormspreeForm(formId, successMessage) {
+    var form = document.getElementById(formId);
+    if (!form) return;
 
-  document.getElementById('signup-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = document.getElementById('signup-email').value;
-    var subject = 'Newsletter signup — The Gospel Vault';
-    var body = 'Please add me to the email list: ' + email;
-    window.location.href = 'mailto:Brcrow01mission@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var note = form.querySelector('.form-note');
+      submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.innerHTML = '<div class="notice">' + successMessage + '</div>';
+        } else {
+          submitBtn.disabled = false;
+          if (note) {
+            note.textContent = "Something went wrong sending that — please try again in a few minutes.";
+          }
+        }
+      }).catch(function () {
+        submitBtn.disabled = false;
+        if (note) {
+          note.textContent = "Something went wrong sending that — please try again in a few minutes.";
+        }
+      });
+    });
+  }
+
+  wireFormspreeForm('contact-form', "Thanks — your message is on its way. We'll get back to you soon.");
+  wireFormspreeForm('signup-form', "You're on the list — thanks for subscribing!");
 </script>
 </body>
 </html>
