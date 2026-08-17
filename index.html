@@ -45,7 +45,17 @@
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="vault.html">Vault</a></li>
+        <li class="dropdown">
+          <details>
+            <summary>Vaults</summary>
+            <ul class="dropdown-menu">
+              <li><a href="vault.html">All Vaults</a></li>
+              <li><a href="vault-1-gospel.html">Vault 1 — The Gospel</a></li>
+              <li><a href="vault-2-devotions.html">Vault 2 — Devotions</a></li>
+              <li><a href="vault-3-bible-studies.html">Vault 3 — Bible Studies</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -73,21 +83,24 @@
       <h2>Rooted in Scripture, Written for Everyday Faith</h2>
     </div>
     <div class="grid">
-      <div class="card">
-        <span class="tag">Daily</span>
-        <h3>Verse &amp; Reflection</h3>
-        <p>Short, focused reflections on a passage of scripture — meant to be read in a few quiet minutes.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Ongoing</span>
-        <h3>Devotional Series</h3>
-        <p>Multi-part studies that walk through a book, theme, or season of the church calendar together.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Curated</span>
-        <h3>The Vault</h3>
-        <p>A growing library of resources, study guides, and passages worth returning to again and again.</p>
-      </div>
+      <a class="card" href="vault-1-gospel.html">
+        <span class="tag">Vault 1</span>
+        <h3>The Gospel</h3>
+        <p>What the Bible says it takes to receive eternal life — start here if you're a new believer, or a
+        believer looking for a fresh start.</p>
+      </a>
+      <a class="card" href="vault-2-devotions.html">
+        <span class="tag">Vault 2</span>
+        <h3>Devotions</h3>
+        <p>Once you know where you stand, the next step is a walk through the Gospel of John — one chapter
+        a day, with a key verse, reflection, and questions for each.</p>
+      </a>
+      <a class="card" href="vault-3-bible-studies.html">
+        <span class="tag">Vault 3</span>
+        <h3>Bible Studies</h3>
+        <p>A ten-part small group series through 1 Thessalonians is live now, with Galatians and
+        2 Thessalonians in the works.</p>
+      </a>
     </div>
   </div>
 </section>
