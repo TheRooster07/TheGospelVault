@@ -476,6 +476,47 @@ textarea { resize: vertical; min-height: 130px; }
   opacity: 0.75;
 }
 
+/* ---------- Eternal Life / Salvation: God's Free Gift — path illustration ---------- */
+.path-wrap {
+  max-width: 760px;
+  margin: 0 auto 8px;
+}
+
+.path-illustration .step { cursor: pointer; }
+
+.path-illustration .step-line {
+  stroke: var(--color-border);
+  stroke-width: 3;
+}
+
+.path-illustration .step circle {
+  fill: var(--color-panel);
+  stroke: var(--color-gold);
+  stroke-width: 1.5;
+  transition: fill 0.15s ease;
+}
+
+.path-illustration .step:hover circle { fill: var(--color-gold); }
+
+.path-illustration .step text {
+  font-family: var(--font-body);
+  fill: var(--color-cream);
+}
+
+.path-illustration .step .num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  fill: var(--color-gold-light);
+  font-size: 26px;
+}
+
+.path-illustration .step:hover .num { fill: var(--color-bg); }
+
+.path-illustration .step .step-label {
+  font-size: 13px;
+  fill: var(--color-cream-dim);
+}
+
 /* ---------- Nav dropdown (Start Here) ---------- */
 .main-nav .dropdown {
   position: relative;
