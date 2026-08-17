@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Living Water, and a Father&rsquo;s Growing Faith — John 4 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #c9a24b;
+    --navy-deep: #e3c987;
+    --green: #c9a24b;
+    --green-soft: #1c3145;
+    --parchment: #0f1a24;
+    --ink: #cfc7b4;
+    --ink-soft: #cfc7b4;
+    --rule: rgba(201, 162, 75, 0.25);
+    --gold: #e3c987;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--gold);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #0f1a24;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #0f1a24 !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+
+  .backbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .backbar a { color: var(--gold); text-decoration: none; }
+  .backbar a:hover { text-decoration: underline; }
+
+  .chapternav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  .chapternav a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .chapternav a:hover { color: var(--navy-deep); text-decoration: underline; }
+  .chapternav__next { margin-left: auto; text-align: right; }
+
+  @media (max-width: 480px) {
+    .chapternav { flex-direction: column; gap: 10px; }
+    .chapternav__next { margin-left: 0; text-align: left; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="backbar"><a href="../vault.html">&larr; The Vault</a><a href="index.html">All 21 Chapters</a></div>
+    
+    <div class="marker">
+      <span class="marker__num">Chapter 04 of 21</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>Living Water, and a Father&rsquo;s Growing Faith</h1>
+    <p class="ref">John 4:1&ndash;54 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;Whoever drinks of the water that I shall give him will never thirst. But the water that I shall give him will become in him a fountain of water springing up into everlasting life.&rdquo;</p>
+      <span class="keyverse__cite">John 4:14</span>
+    </div>
+
+    <div class="body">
+      <p>Jesus &ldquo;needed to go through Samaria&rdquo; &mdash; a route most observant Jews avoided entirely &mdash; because a woman there needed to meet Him, though she had no idea that was coming. He asks her for a drink, meets her exactly where she is (tired, thirsty, guarded), and slowly moves the conversation from a well bucket to something no bucket could ever hold: water that becomes, in the one who drinks it, a spring welling up to eternal life. Not a reservoir you have to keep refilling &mdash; a source, permanently inside you. She still doesn&rsquo;t fully understand at first, but by the end of the conversation she&rsquo;s run back to her whole village saying, &ldquo;Come, see a Man who told me all things that I ever did. Could this be the Christ?&rdquo; Her testimony, imperfect as it was, brought an entire town to Jesus.</p>
+      <p>The chapter closes with a very different kind of person &mdash; a nobleman, a man of status &mdash; whose son is dying. His faith grows in real time, right in front of you: first crisis faith (&ldquo;come down before my child dies&rdquo;), then confident faith (he believes Jesus&rsquo;s word alone and starts home without Him), then confirmed faith (his servants meet him with the news, and the timing matches exactly), and finally contagious faith &mdash; &ldquo;he himself believed, and his whole household.&rdquo; That&rsquo;s the whole chapter in miniature: a woman with no standing and a man with plenty of it, both led by Jesus from something temporary to something that doesn&rsquo;t run dry. Living water, once given, doesn&rsquo;t need topping off.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Chapter</h2>
+      <ol>
+        <li>The Samaritan woman came for physical water and left with something permanent &mdash; a spring, not a bucket she&rsquo;d have to keep filling. Where in your life have you been drawing from a well that keeps running dry, when Jesus is offering something that doesn&rsquo;t?</li>
+        <li>The nobleman&rsquo;s faith moved from crisis, to confident, to confirmed, to contagious. Which of those four is closest to where your own faith stands right now?</li>
+        <li>The woman&rsquo;s testimony wasn&rsquo;t polished or complete &mdash; just, &ldquo;Come, see a Man who told me all things.&rdquo; Who in your life could use that same simple, imperfect invitation from you?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full chapter today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/jhn/4/1/" target="_blank" rel="noopener">
+        Read John 4 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="chapternav"><a class="chapternav__prev" href="john-03-born-again-and-the-love-that-sent-him.html">&larr; Chapter 3: Born Again, and the Love That Sent Him</a><a class="chapternav__next" href="john-05-from-death-into-life.html">Chapter 5: From Death Into Life &rarr;</a></div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO THE GOSPEL OF JOHN
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
