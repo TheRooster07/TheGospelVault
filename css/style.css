@@ -240,7 +240,7 @@ section { padding: 72px 0; }
   margin-bottom: 16px;
 }
 
-.card h3 { margin-bottom: 10px; }
+.card h3 { margin-bottom: 10px; text-wrap: balance; }
 
 /* ---------- Forms ---------- */
 form {
@@ -506,6 +506,11 @@ textarea { resize: vertical; min-height: 130px; }
 }
 
 .main-nav .dropdown-menu {
+  /* .main-nav ul sets display:flex site-wide for the top-level nav row; this menu is
+     also a <ul> nested inside .main-nav, so without an explicit override here it
+     inherits that flex row and lays its items out side-by-side instead of stacked,
+     which is what was cutting the "Start Here" menu off the edge of the browser. */
+  display: block;
   list-style: none;
   margin: 10px 0 0;
   padding: 8px 0;
@@ -513,6 +518,7 @@ textarea { resize: vertical; min-height: 130px; }
   border: 1px solid var(--color-border);
   border-radius: 6px;
   min-width: 220px;
+  max-width: 280px;
 }
 
 .main-nav .dropdown-menu li a {

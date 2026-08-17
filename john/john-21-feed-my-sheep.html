@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feed My Sheep — John 21 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #c9a24b;
+    --navy-deep: #e3c987;
+    --green: #c9a24b;
+    --green-soft: #1c3145;
+    --parchment: #0f1a24;
+    --ink: #cfc7b4;
+    --ink-soft: #cfc7b4;
+    --rule: rgba(201, 162, 75, 0.25);
+    --gold: #e3c987;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--gold);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #0f1a24;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #0f1a24 !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+
+  .backbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .backbar a { color: var(--gold); text-decoration: none; }
+  .backbar a:hover { text-decoration: underline; }
+
+  .chapternav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  .chapternav a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .chapternav a:hover { color: var(--navy-deep); text-decoration: underline; }
+  .chapternav__next { margin-left: auto; text-align: right; }
+
+  @media (max-width: 480px) {
+    .chapternav { flex-direction: column; gap: 10px; }
+    .chapternav__next { margin-left: 0; text-align: left; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="backbar"><a href="../vault.html">&larr; The Vault</a><a href="index.html">All 21 Chapters</a></div>
+    
+    <div class="marker">
+      <span class="marker__num">Chapter 21 of 21</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>Feed My Sheep</h1>
+    <p class="ref">John 21:1&ndash;25 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;He said to him the third time, &ldquo;Simon, son of Jonah, do you love Me?&rdquo;&hellip;&ldquo;Lord, You know all things; You know that I love You.&rdquo; Jesus said to him, &ldquo;Feed My sheep.&rdquo;&rdquo;</p>
+      <span class="keyverse__cite">John 21:17</span>
+    </div>
+
+    <div class="body">
+      <p>Seven disciples go fishing on the Sea of Galilee and catch nothing all night &mdash; until a stranger on the shore tells them to cast their net on the other side, and it comes up so full they can barely haul it in. John recognizes Him first: &ldquo;It is the Lord!&rdquo; &mdash; and Peter, without hesitation, jumps straight into the water to get to Him faster than the boat could carry him. On shore, Jesus already has bread and fish cooking over a charcoal fire. He doesn&rsquo;t need their catch to feed them; He simply invites them into what He&rsquo;s already prepared: &ldquo;Come and dine.&rdquo; It&rsquo;s a small, quiet scene, and it&rsquo;s also unmistakably deliberate &mdash; another charcoal fire, echoing the one Peter stood beside three times denying he knew Jesus at all.</p>
+      <p>After breakfast, Jesus asks Peter the same question three times &mdash; &ldquo;Do you love Me?&rdquo; &mdash; matching, one for one, Peter&rsquo;s three denials. Each time Peter answers, Jesus responds not with a lecture about his failure but with a commission: &ldquo;Feed My lambs. Tend My sheep. Feed My sheep.&rdquo; There&rsquo;s no condemnation in the exchange, only restoration. Peter&rsquo;s past failure doesn&rsquo;t disqualify him from future ministry &mdash; it becomes the very soil that ministry grows from. Jesus even tells Peter plainly that he&rsquo;ll one day die for his faith, and then gives him the same two words He gave him at the very beginning, back on this same shore: &ldquo;Follow Me.&rdquo; The Gospel that opened with John the Baptist pointing to the Lamb of God closes with an ordinary fisherman, freshly forgiven, being handed a shepherd&rsquo;s task &mdash; and with John's own testimony that everything written here is true, though the world itself couldn&rsquo;t contain all there was to tell.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Chapter</h2>
+      <ol>
+        <li>Jesus restored Peter with the exact number of questions matching his denials &mdash; not to shame him, but to fully undo the failure. Is there a past failure you're still carrying that Christ has already fully addressed and moved past?</li>
+        <li>Jesus's restoration of Peter came with a job, not just forgiveness &mdash; &ldquo;feed My sheep.&rdquo; Where might God be inviting you to serve others specifically out of the place where you once failed?</li>
+        <li>The same two words that called Peter at the start of his journey &mdash; &ldquo;Follow Me&rdquo; &mdash; close the book. After 21 chapters of this Gospel, what does &ldquo;follow Me&rdquo; look like for you starting today?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full chapter today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/jhn/21/1/" target="_blank" rel="noopener">
+        Read John 21 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="chapternav"><a class="chapternav__prev" href="john-20-that-you-may-believe.html">&larr; Chapter 20: That You May Believe</a><a class="chapternav__next" href="../vault.html">Back to the Vault &rarr;</a></div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO THE GOSPEL OF JOHN
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
