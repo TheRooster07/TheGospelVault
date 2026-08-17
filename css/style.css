@@ -241,6 +241,20 @@ section { padding: 72px 0; }
 }
 
 .card h3 { margin-bottom: 10px; text-wrap: balance; }
+a.card {
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.card:hover {
+  border-color: var(--color-gold);
+  background: var(--color-bg-alt);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  text-decoration: none;
+}
+
+a.card:hover h3 { color: var(--color-gold-light); }
 
 /* ---------- Forms ---------- */
 form {
@@ -545,6 +559,10 @@ textarea { resize: vertical; min-height: 130px; }
 .main-nav .dropdown > summary:hover {
   color: var(--color-gold-light);
 }
+.main-nav .dropdown > summary.active {
+  color: var(--color-gold-light);
+  border-bottom: 1px solid var(--color-gold-light);
+}
 
 .main-nav .dropdown-menu {
   /* .main-nav ul sets display:flex site-wide for the top-level nav row; this menu is
@@ -600,4 +618,176 @@ textarea { resize: vertical; min-height: 130px; }
     background: transparent;
     padding-left: 10px;
   }
+}
+
+
+/* ---------- Bible Study pages (Vault 3) ---------- */
+.study-meta {
+  text-align: center;
+  color: var(--color-cream-dim);
+  font-size: 0.82rem;
+  max-width: 680px;
+  margin: 0 auto 8px;
+}
+
+.study-section-label {
+  text-align: center;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+}
+
+.study-section-note {
+  text-align: center;
+  color: var(--color-cream-dim);
+  font-size: 0.82rem;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  font-style: italic;
+}
+
+.commentary-body { max-width: 720px; margin: 0 auto; }
+.commentary-body p { color: var(--color-cream-dim); margin-bottom: 16px; }
+.commentary-body h3 {
+  color: var(--color-gold-light);
+  font-size: 1.35rem;
+  margin: 44px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+.commentary-body h3:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.commentary-body h4 { color: var(--color-cream); font-size: 1.05rem; margin: 26px 0 10px; }
+.commentary-body h5 {
+  color: var(--color-gold);
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 18px 0 8px;
+}
+.commentary-body blockquote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-gold-light);
+  border-left: 3px solid var(--color-gold);
+  padding-left: 20px;
+  margin: 24px 0;
+}
+.commentary-body .prayer-line {
+  font-style: italic;
+  color: var(--color-gold-light);
+  text-align: center;
+  margin: 32px 0 0;
+}
+
+.proposition-box {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 22px 26px;
+  margin: 0 auto 36px;
+  max-width: 720px;
+  font-style: italic;
+  color: var(--color-cream);
+}
+.proposition-box .label {
+  display: block;
+  font-style: normal;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  margin-bottom: 8px;
+}
+
+.study-table-wrap {
+  overflow-x: auto;
+  margin: 0 auto 36px;
+  max-width: 720px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+.study-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.study-table th, .study-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--color-cream-dim);
+}
+.study-table th {
+  background: var(--color-bg-alt);
+  color: var(--color-gold-light);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.study-table td:first-child { color: var(--color-gold-light); white-space: nowrap; font-weight: 600; }
+.study-table tr:last-child td { border-bottom: none; }
+
+.qa-block { max-width: 720px; margin: 0 auto 14px; }
+.qa-block .question {
+  color: var(--color-cream);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.qa-block details {
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 18px;
+}
+.qa-block summary {
+  cursor: pointer;
+  color: var(--color-gold);
+  font-size: 0.82rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.qa-block .answer-text {
+  color: var(--color-cream-dim);
+  padding: 0 0 16px;
+  font-size: 0.92rem;
+}
+
+.app-card {
+  max-width: 720px;
+  margin: 0 auto 22px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 6px;
+  padding: 24px 28px;
+}
+.app-card h4 { color: var(--color-gold-light); margin-bottom: 10px; }
+.app-card .app-ref {
+  color: var(--color-cream);
+  font-size: 0.88rem;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.app-card .app-source {
+  color: var(--color-cream-dim);
+  font-size: 0.76rem;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+.app-card p { color: var(--color-cream-dim); margin-bottom: 10px; }
+.app-card .app-field-label { color: var(--color-cream); font-weight: 600; }
+
+.endnotes {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: var(--color-cream-dim);
+}
+.endnotes ol { padding-left: 20px; }
+.endnotes li { margin-bottom: 8px; }
+
+.study-download {
+  text-align: center;
+  margin: 0 auto 36px;
 }
