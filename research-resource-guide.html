@@ -23,6 +23,47 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+  /* Compact resource-list layout, scoped to this page */
+  .resource-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 760px;
+  }
+  .resource-item {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .resource-item:first-child { padding-top: 0; }
+  .resource-item:last-child { border-bottom: none; }
+  .resource-item h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .resource-item h3 a { color: var(--color-cream); }
+  .resource-item h3 a:hover { color: var(--color-gold-light); }
+  .resource-item .tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+  .resource-item .resource-url { margin: 0 0 8px; font-size: 0.85rem; }
+  .resource-item p { margin: 0 0 6px; color: var(--color-cream-dim); }
+  .resource-item .resource-cadence {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-cream-dim);
+    opacity: 0.75;
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,7 +128,22 @@
   </div>
 </section>
 
-<section class="section-alt">
+<section class="section-alt" id="how-to-use">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Summary</span>
+      <h2>How to Use This List</h2>
+    </div>
+    <div class="devo-body">
+      <p>As a rule of thumb: <strong>Joshua Project and Ethnologue/ProgressBible</strong> answer "who and where"; <strong>Open Doors and Freedom House</strong> answer "how restricted"; <strong>ITU and GSMA</strong> answer "can they be reached digitally, and how"; <strong>WHO/WFD/DOOR</strong> answer Deaf-specific questions; and <strong>ECFA/MinistryWatch/Candid</strong> answer "can this partner organization be trusted with resources." No single source in any category is fully authoritative on its own — cross-checking two sources per question is the more defensible approach for any figures used in external-facing planning documents.</p>
+      <p style="text-align:center; margin-top:28px;">
+        <a class="btn btn-primary" href="research-resource-guide.pdf" download>Download This Guide (PDF)</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">Headline Numbers</span>
@@ -106,244 +162,224 @@
 </section>
 
 <!-- 1. Bible Translation -->
-<section id="translation">
+<section class="section-alt" id="translation">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">01 &middot; Language Data</span>
       <h2>Bible Translation &amp; Language Data</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <span class="tag">SIL International</span>
-        <h3>Ethnologue: Languages of the World</h3>
-        <p><a href="https://www.ethnologue.com" target="_blank" rel="noopener">ethnologue.com</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://www.ethnologue.com" target="_blank" rel="noopener">Ethnologue: Languages of the World</a> <span class="tag">SIL International</span></h3>
+        <p class="resource-url"><a href="https://www.ethnologue.com" target="_blank" rel="noopener">ethnologue.com</a></p>
         <p>The master global reference for language counts, speaker populations, geographic distribution, and vitality/endangerment status (EGIDS scale). Wycliffe's own ProgressBible figures are built on Ethnologue data. More granular than any summary source used so far — searchable by country, language family, or status.</p>
-        <p class="form-note">New edition roughly annually (29th edition current as of 2026). Core lookup free; full statistical summaries require subscription.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Wycliffe Global Alliance / SIL</span>
-        <h3>ProgressBible</h3>
-        <p><a href="https://progress.bible" target="_blank" rel="noopener">progress.bible</a></p>
+        <p class="resource-cadence">New edition roughly annually (29th edition current as of 2026). Core lookup free; full statistical summaries require subscription.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://progress.bible" target="_blank" rel="noopener">ProgressBible</a> <span class="tag">Wycliffe Global Alliance / SIL</span></h3>
+        <p class="resource-url"><a href="https://progress.bible" target="_blank" rel="noopener">progress.bible</a></p>
         <p>The live database behind the translation-status figures cited throughout this research (544 languages waiting, 1,676 with no Scripture and no active work, etc.). Going to the database directly rather than Wycliffe's blog summaries allows filtering by country or region.</p>
-        <p class="form-note">Updated continuously; public dashboard with downloadable snapshots.</p>
-      </div>
-      <div class="card">
-        <span class="tag">UNESCO</span>
-        <h3>Atlas of the World's Languages in Danger</h3>
-        <p><a href="https://en.wal.unesco.org" target="_blank" rel="noopener">en.wal.unesco.org</a></p>
+        <p class="resource-cadence">Updated continuously; public dashboard with downloadable snapshots.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://en.wal.unesco.org" target="_blank" rel="noopener">UNESCO Atlas of the World's Languages in Danger</a></h3>
+        <p class="resource-url"><a href="https://en.wal.unesco.org" target="_blank" rel="noopener">en.wal.unesco.org</a></p>
         <p>Independent cross-check on endangered and dying languages, useful for identifying where "never translated" and "going extinct" overlap — a distinct urgency signal beyond simple translation-waiting-list status.</p>
-        <p class="form-note">Periodically updated by UNESCO; successor World Atlas of Languages platform is the current version.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Periodically updated by UNESCO; successor World Atlas of Languages platform is the current version.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 2. Unreached People Groups -->
-<section class="section-alt" id="upg">
+<section id="upg">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">02 &middot; Missiology</span>
       <h2>Unreached People Groups &amp; Missiology</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <h3>Joshua Project</h3>
-        <p><a href="https://joshuaproject.net" target="_blank" rel="noopener">joshuaproject.net</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://joshuaproject.net" target="_blank" rel="noopener">Joshua Project</a></h3>
+        <p class="resource-url"><a href="https://joshuaproject.net" target="_blank" rel="noopener">joshuaproject.net</a></p>
         <p>The primary reference used throughout this research for unreached/frontier people group counts, the 10/40 Window, oral-preference statistics, and progress-scale classification. Includes a free REST API and downloadable datasets by country, language, and religion.</p>
-        <p class="form-note">Continuously updated; ministry of the U.S. Center for World Mission.</p>
-      </div>
-      <div class="card">
-        <h3>Finishing the Task (FTT)</h3>
-        <p><a href="https://finishingthetask.com" target="_blank" rel="noopener">finishingthetask.com</a></p>
+        <p class="resource-cadence">Continuously updated; ministry of the U.S. Center for World Mission.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://finishingthetask.com" target="_blank" rel="noopener">Finishing the Task (FTT)</a></h3>
+        <p class="resource-url"><a href="https://finishingthetask.com" target="_blank" rel="noopener">finishingthetask.com</a></p>
         <p>An independent unreached/unengaged people group list, useful as a second source since it does not always agree with Joshua Project — triangulating between lists reduces reliance on any single methodology. Referenced earlier regarding the Deaf population in Nepal.</p>
-        <p class="form-note">Coalition of mission agencies; periodically updated list.</p>
-      </div>
-      <div class="card">
-        <span class="tag">International Mission Board</span>
-        <h3>IMB People Groups</h3>
-        <p><a href="https://peoplegroups.org" target="_blank" rel="noopener">peoplegroups.org</a></p>
+        <p class="resource-cadence">Coalition of mission agencies; periodically updated list.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://peoplegroups.org" target="_blank" rel="noopener">IMB People Groups</a> <span class="tag">International Mission Board</span></h3>
+        <p class="resource-url"><a href="https://peoplegroups.org" target="_blank" rel="noopener">peoplegroups.org</a></p>
         <p>A third independent people-group database, maintained by the IMB's global research team. Useful as an additional cross-check alongside Joshua Project and FTT, since the three lists use different definitions and field sourcing.</p>
-        <p class="form-note">Updated by IMB regional and national field staff on an ongoing basis.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Joshua Project / Pray1040</span>
-        <h3>The 10/40 Window Resource Hub</h3>
-        <p><a href="https://joshuaproject.net/resources/articles/10_40_window" target="_blank" rel="noopener">joshuaproject.net</a> &amp; <a href="https://pray1040.com" target="_blank" rel="noopener">pray1040.com</a></p>
+        <p class="resource-cadence">Updated by IMB regional and national field staff on an ongoing basis.</p>
+      </li>
+      <li class="resource-item">
+        <h3>The 10/40 Window Resource Hub <span class="tag">Joshua Project / Pray1040</span></h3>
+        <p class="resource-url"><a href="https://joshuaproject.net/resources/articles/10_40_window" target="_blank" rel="noopener">joshuaproject.net</a> &amp; <a href="https://pray1040.com" target="_blank" rel="noopener">pray1040.com</a></p>
         <p>Country lists, maps, and statistics for the 10/40 Window band, already the geographic backbone of this research's zone framework.</p>
-        <p class="form-note">Periodically revised country list; static reference with periodic updates.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Periodically revised country list; static reference with periodic updates.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 3. Persecution -->
-<section id="persecution">
+<section class="section-alt" id="persecution">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">03 &middot; Religious Freedom</span>
       <h2>Persecution &amp; Religious Freedom</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <h3>Open Doors World Watch List</h3>
-        <p><a href="https://www.opendoors.org/en-us/persecution/world-watch-list/" target="_blank" rel="noopener">opendoors.org</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://www.opendoors.org/en-us/persecution/world-watch-list/" target="_blank" rel="noopener">Open Doors World Watch List</a></h3>
+        <p class="resource-url"><a href="https://www.opendoors.org/en-us/persecution/world-watch-list/" target="_blank" rel="noopener">opendoors.org</a></p>
         <p>Already in use in this research — the annual ranking of the 50 countries where Christian persecution is most severe. The primary prioritization tool for the "restricted access" half of the framework.</p>
-        <p class="form-note">Published annually, typically in January.</p>
-      </div>
-      <div class="card">
-        <h3>World Watch Monitor</h3>
-        <p><a href="https://www.worldwatchmonitor.org" target="_blank" rel="noopener">worldwatchmonitor.org</a></p>
+        <p class="resource-cadence">Published annually, typically in January.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://www.worldwatchmonitor.org" target="_blank" rel="noopener">World Watch Monitor</a></h3>
+        <p class="resource-url"><a href="https://www.worldwatchmonitor.org" target="_blank" rel="noopener">worldwatchmonitor.org</a></p>
         <p>News and country-level reporting specifically on Christian persecution, complementing Open Doors' annual ranking with ongoing incident-level detail.</p>
-        <p class="form-note">Continuously updated news reporting.</p>
-      </div>
-      <div class="card">
-        <h3>Release International</h3>
-        <p><a href="https://releaseinternational.org" target="_blank" rel="noopener">releaseinternational.org</a></p>
+        <p class="resource-cadence">Continuously updated news reporting.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://releaseinternational.org" target="_blank" rel="noopener">Release International</a></h3>
+        <p class="resource-url"><a href="https://releaseinternational.org" target="_blank" rel="noopener">releaseinternational.org</a></p>
         <p>UK-based persecution-monitoring and support organization; useful secondary source for cross-checking Open Doors' country assessments.</p>
-        <p class="form-note">Ongoing country updates and annual reporting.</p>
-      </div>
-      <div class="card">
-        <h3>Freedom House</h3>
-        <p><a href="https://freedomhouse.org" target="_blank" rel="noopener">freedomhouse.org</a></p>
+        <p class="resource-cadence">Ongoing country updates and annual reporting.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://freedomhouse.org" target="_blank" rel="noopener">Freedom House</a></h3>
+        <p class="resource-url"><a href="https://freedomhouse.org" target="_blank" rel="noopener">freedomhouse.org</a></p>
         <p>Independent (non-faith-based) annual assessments of political freedom and internet freedom by country. Useful for a secular cross-check on which "closed" countries are closed for general political reasons vs. specifically religious ones, and for internet censorship severity by country.</p>
-        <p class="form-note">Two annual reports: Freedom in the World and Freedom on the Net.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Two annual reports: Freedom in the World and Freedom on the Net.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 4. Connectivity -->
-<section class="section-alt" id="connectivity">
+<section id="connectivity">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">04 &middot; Technology</span>
       <h2>Connectivity &amp; Technology</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <span class="tag">International Telecommunication Union</span>
-        <h3>ITU — Facts and Figures</h3>
-        <p><a href="https://www.itu.int/itu-d/reports/statistics/" target="_blank" rel="noopener">itu.int</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://www.itu.int/itu-d/reports/statistics/" target="_blank" rel="noopener">ITU — Facts and Figures</a> <span class="tag">International Telecommunication Union</span></h3>
+        <p class="resource-url"><a href="https://www.itu.int/itu-d/reports/statistics/" target="_blank" rel="noopener">itu.int</a></p>
         <p>The authoritative UN source for global and country-level internet penetration, more current and more granular than the CIA World Factbook for this specific data. Provides the urban/rural and income-level breakdowns cited above.</p>
-        <p class="form-note">Annual flagship report ("Facts and Figures"), published each fall.</p>
-      </div>
-      <div class="card">
+        <p class="resource-cadence">Annual flagship report ("Facts and Figures"), published each fall.</p>
+      </li>
+      <li class="resource-item">
         <h3>GSMA Mobile Connectivity Index</h3>
-        <p><a href="https://www.mobileconnectivityindex.com" target="_blank" rel="noopener">mobileconnectivityindex.com</a> &amp; <a href="https://www.gsma.com/somic" target="_blank" rel="noopener">gsma.com/somic</a></p>
+        <p class="resource-url"><a href="https://www.mobileconnectivityindex.com" target="_blank" rel="noopener">mobileconnectivityindex.com</a> &amp; <a href="https://www.gsma.com/somic" target="_blank" rel="noopener">gsma.com/somic</a></p>
         <p>Covers 170 countries across 32 indicators; the key value-add beyond ITU is the coverage-gap vs. usage-gap distinction — directly informs whether a region needs infrastructure (satellite) or adoption/content work (apps, training, affordability).</p>
-        <p class="form-note">Annual report series (State of Mobile Internet Connectivity), published each fall.</p>
-      </div>
-      <div class="card">
-        <span class="tag">see also Freedom House</span>
-        <h3>OpenNet Initiative / Freedom on the Net</h3>
-        <p><a href="https://freedomhouse.org/report/freedom-net" target="_blank" rel="noopener">freedomhouse.org/report/freedom-net</a></p>
+        <p class="resource-cadence">Annual report series (State of Mobile Internet Connectivity), published each fall.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://freedomhouse.org/report/freedom-net" target="_blank" rel="noopener">OpenNet Initiative / Freedom on the Net</a> <span class="tag">see also Freedom House</span></h3>
+        <p class="resource-url"><a href="https://freedomhouse.org/report/freedom-net" target="_blank" rel="noopener">freedomhouse.org/report/freedom-net</a></p>
         <p>Country-by-country internet censorship and restriction severity — the specific data point needed to judge whether an app-based approach is viable versus likely to be blocked or monitored in a given restricted country.</p>
-        <p class="form-note">Annual report.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Annual report.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 5. Deaf Ministry -->
-<section id="deaf">
+<section class="section-alt" id="deaf">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">05 &middot; Deaf Ministry</span>
       <h2>Deaf &amp; Sign Language Ministry</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <h3>World Federation of the Deaf (WFD)</h3>
-        <p><a href="https://wfdeaf.org" target="_blank" rel="noopener">wfdeaf.org</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://wfdeaf.org" target="_blank" rel="noopener">World Federation of the Deaf (WFD)</a></h3>
+        <p class="resource-url"><a href="https://wfdeaf.org" target="_blank" rel="noopener">wfdeaf.org</a></p>
         <p>The source organization behind most global Deaf population and sign-language figures cited in this research (the ~70 million estimate, 200–300+ sign languages). Primary source rather than secondary aggregation.</p>
-        <p class="form-note">Ongoing; periodic position papers and statistics updates.</p>
-      </div>
-      <div class="card">
-        <h3>Deaf Bible Society</h3>
-        <p><a href="https://www.deafbiblesociety.com" target="_blank" rel="noopener">deafbiblesociety.com</a></p>
+        <p class="resource-cadence">Ongoing; periodic position papers and statistics updates.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://www.deafbiblesociety.com" target="_blank" rel="noopener">Deaf Bible Society</a></h3>
+        <p class="resource-url"><a href="https://www.deafbiblesociety.com" target="_blank" rel="noopener">deafbiblesociety.com</a></p>
         <p>Publisher of the Deaf Bible App and tracker of sign-language Scripture translation status specifically — more granular than general Bible-translation sources for this population.</p>
-        <p class="form-note">Ongoing; app and translation-status updates.</p>
-      </div>
-      <div class="card">
-        <h3>DOOR International</h3>
-        <p><a href="https://doorinternational.org" target="_blank" rel="noopener">doorinternational.org</a></p>
+        <p class="resource-cadence">Ongoing; app and translation-status updates.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://doorinternational.org" target="_blank" rel="noopener">DOOR International</a></h3>
+        <p class="resource-url"><a href="https://doorinternational.org" target="_blank" rel="noopener">doorinternational.org</a></p>
         <p>Deaf-led Bible translation and church-planting ministry; publishes its own Deaf-specific unreached statistics and translation progress, and was the primary source for the Deaf figures used earlier in this research.</p>
-        <p class="form-note">Ongoing ministry updates and annual reporting.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Ongoing ministry updates and annual reporting.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 6. General Demographics -->
-<section class="section-alt" id="demographics">
+<section id="demographics">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">06 &middot; Demographics</span>
       <h2>General Demographics</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <h3>CIA World Factbook</h3>
-        <p><a href="https://www.cia.gov/the-world-factbook/" target="_blank" rel="noopener">cia.gov/the-world-factbook</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://www.cia.gov/the-world-factbook/" target="_blank" rel="noopener">CIA World Factbook</a></h3>
+        <p class="resource-url"><a href="https://www.cia.gov/the-world-factbook/" target="_blank" rel="noopener">cia.gov/the-world-factbook</a></p>
         <p>Best for population age structure, literacy rate, internet/mobile penetration (though ITU/GSMA are more current for connectivity specifically), government type, and religious composition by country. Not a source for mission-specific or Deaf-specific data.</p>
-        <p class="form-note">Updated on a rolling basis, country by country.</p>
-      </div>
-      <div class="card">
-        <h3>UN Population Division — World Population Prospects</h3>
-        <p><a href="https://population.un.org/wpp/" target="_blank" rel="noopener">population.un.org/wpp</a></p>
+        <p class="resource-cadence">Updated on a rolling basis, country by country.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://population.un.org/wpp/" target="_blank" rel="noopener">UN Population Division — World Population Prospects</a></h3>
+        <p class="resource-url"><a href="https://population.un.org/wpp/" target="_blank" rel="noopener">population.un.org/wpp</a></p>
         <p>Authoritative source for population totals, age-structure projections, and urban/rural splits by country — more rigorous than the Factbook for demographic modeling and projections.</p>
-        <p class="form-note">Major revision approximately every two years.</p>
-      </div>
-      <div class="card">
-        <h3>WHO — Deafness and Hearing Loss Fact Sheet</h3>
-        <p><a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss" target="_blank" rel="noopener">who.int</a></p>
+        <p class="resource-cadence">Major revision approximately every two years.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss" target="_blank" rel="noopener">WHO — Deafness and Hearing Loss Fact Sheet</a></h3>
+        <p class="resource-url"><a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss" target="_blank" rel="noopener">who.int</a></p>
         <p>Primary source for the global hearing-loss and Deaf population figures used in this research (430 million with disabling hearing loss, 34 million children, age-distribution data).</p>
-        <p class="form-note">Periodically updated fact sheet, most recently March 2026.</p>
-      </div>
-    </div>
+        <p class="resource-cadence">Periodically updated fact sheet, most recently March 2026.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- 7. Accountability -->
-<section id="accountability">
+<section class="section-alt" id="accountability">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">07 &middot; Accountability</span>
       <h2>Nonprofit &amp; Organizational Accountability</h2>
     </div>
-    <div class="grid">
-      <div class="card">
-        <span class="tag">Evangelical Council for Financial Accountability</span>
-        <h3>ECFA</h3>
-        <p><a href="https://www.ecfa.org" target="_blank" rel="noopener">ecfa.org</a></p>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="https://www.ecfa.org" target="_blank" rel="noopener">ECFA</a> <span class="tag">Evangelical Council for Financial Accountability</span></h3>
+        <p class="resource-url"><a href="https://www.ecfa.org" target="_blank" rel="noopener">ecfa.org</a></p>
         <p>Already in use for org-level financial data. Confirms an organization meets defined financial-accountability standards — useful as a basic trust filter before deeper partnership evaluation.</p>
-        <p class="form-note">Member profiles updated on each organization's fiscal-year cycle.</p>
-      </div>
-      <div class="card">
-        <h3>MinistryWatch</h3>
-        <p><a href="https://ministrywatch.com" target="_blank" rel="noopener">ministrywatch.com</a></p>
+        <p class="resource-cadence">Member profiles updated on each organization's fiscal-year cycle.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://ministrywatch.com" target="_blank" rel="noopener">MinistryWatch</a></h3>
+        <p class="resource-url"><a href="https://ministrywatch.com" target="_blank" rel="noopener">ministrywatch.com</a></p>
         <p>Already in use throughout this research for org profiles, financials, and staffing data. Independent evaluator with its own donor-confidence scoring, useful as a secondary check alongside ECFA.</p>
-        <p class="form-note">Profiles updated periodically; donor-confidence scores recalculated regularly.</p>
-      </div>
-      <div class="card">
-        <h3>Candid / GuideStar</h3>
-        <p><a href="https://www.guidestar.org" target="_blank" rel="noopener">guidestar.org</a></p>
+        <p class="resource-cadence">Profiles updated periodically; donor-confidence scores recalculated regularly.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="https://www.guidestar.org" target="_blank" rel="noopener">Candid / GuideStar</a></h3>
+        <p class="resource-url"><a href="https://www.guidestar.org" target="_blank" rel="noopener">guidestar.org</a></p>
         <p>The largest U.S. nonprofit database, useful for Form 990 financial detail on any US-registered mission organization not already profiled in this research.</p>
-        <p class="form-note">Updated as organizations file annual Form 990s with the IRS.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt" id="how-to-use">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Summary</span>
-      <h2>How to Use This List</h2>
-    </div>
-    <div class="devo-body">
-      <p>As a rule of thumb: <strong>Joshua Project and Ethnologue/ProgressBible</strong> answer "who and where"; <strong>Open Doors and Freedom House</strong> answer "how restricted"; <strong>ITU and GSMA</strong> answer "can they be reached digitally, and how"; <strong>WHO/WFD/DOOR</strong> answer Deaf-specific questions; and <strong>ECFA/MinistryWatch/Candid</strong> answer "can this partner organization be trusted with resources." No single source in any category is fully authoritative on its own — cross-checking two sources per question is the more defensible approach for any figures used in external-facing planning documents.</p>
-    </div>
+        <p class="resource-cadence">Updated as organizations file annual Form 990s with the IRS.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
