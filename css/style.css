@@ -429,6 +429,25 @@ textarea { resize: vertical; min-height: 130px; }
   font-weight: 600;
 }
 
+.verse-entry {
+  margin-top: 20px;
+}
+
+.verse-entry .verse-label {
+  margin: 0 0 4px;
+  color: var(--color-gold-light);
+  font-weight: 700;
+}
+
+.verse-entry .verse-label .verse-tag {
+  font-weight: 600;
+}
+
+.verse-entry .verse-text {
+  margin: 0;
+  font-style: italic;
+}
+
 .devo-body {
   max-width: 680px;
   margin: 0 auto;
