@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abba, Father — Galatians 4:1-11 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1F3864;
+    --navy-deep: #16294A;
+    --green: #375623;
+    --green-soft: #F0F4EE;
+    --parchment: #FAF7EF;
+    --ink: #2B2B26;
+    --ink-soft: #565248;
+    --rule: #DCD5C2;
+    --gold: #A9832E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="marker">
+      <span class="marker__num">Galatians 09 of 16</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>Abba, Father</h1>
+    <p class="ref">Galatians 4:1&ndash;11 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;And because you are sons, God has sent forth the Spirit of His Son into your hearts, crying out, &ldquo;Abba, Father!&rdquo; Therefore you are no longer a slave but a son, and if a son, then an heir of God through Christ.&rdquo;</p>
+      <span class="keyverse__cite">Galatians 4:6&ndash;7</span>
+    </div>
+
+    <div class="body">
+      <p>Paul draws a picture familiar to every Galatian reader: a child who will one day inherit everything, but who, while still young, lives no differently than a household slave &mdash; under guardians, following rules, waiting for the day the father has appointed. That was the condition of both Jew and Gentile believers before Christ came, Paul says: &ldquo;in bondage under the elements of the world,&rdquo; whether that bondage looked like Mosaic law-keeping or pagan religious observance. But &ldquo;when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law, to redeem those who were under the law, that we might receive the adoption as sons.&rdquo; The waiting period was never meant to be permanent. It had an appointed end.</p>
+      <p>And what happens at that adoption isn&rsquo;t just a change in legal status &mdash; it&rsquo;s a change in relationship, sealed by the Spirit Himself crying out from inside you, &ldquo;Abba, Father.&rdquo; That word isn&rsquo;t formal address; it&rsquo;s the intimate, almost childlike word a son used for his own father &mdash; closer to &ldquo;Daddy&rdquo; than &ldquo;Father.&rdquo; You are no longer a slave straining under rules, but a son with full inheritance rights, adopted permanently into God&rsquo;s own family. Which makes Paul&rsquo;s next question land with real force: knowing all that, why would you turn back to &ldquo;weak and beggarly elements&rdquo; &mdash; observing special days and seasons as though your standing with God depended on it? Slavery to rules, however religious it looks, is still slavery. Sonship was never meant to be traded back for it.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Passage</h2>
+      <ol>
+        <li>"Abba" is an intimate, childlike word for father, not formal or distant. Does your own prayer life reflect that kind of closeness, or does it still feel more like formal address to a distant authority?</li>
+        <li>Paul describes the pre-Christ condition as slavery under "elements" &mdash; rules and observances that couldn't actually deliver freedom. What modern version of rule-keeping might you be tempted to trade your sonship back for?</li>
+        <li>Sonship in this passage means full inheritance rights, not probationary status. Does your relationship with God feel settled and secure, or does some part of you still feel like you're on trial?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full passage today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/gal/4/1/" target="_blank" rel="noopener">
+        Read Galatians 4:1-11 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO GALATIANS
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>

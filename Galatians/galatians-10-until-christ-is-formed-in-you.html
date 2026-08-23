@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Until Christ Is Formed in You — Galatians 4:12-20 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1F3864;
+    --navy-deep: #16294A;
+    --green: #375623;
+    --green-soft: #F0F4EE;
+    --parchment: #FAF7EF;
+    --ink: #2B2B26;
+    --ink-soft: #565248;
+    --rule: #DCD5C2;
+    --gold: #A9832E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="marker">
+      <span class="marker__num">Galatians 10 of 16</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>Until Christ Is Formed in You</h1>
+    <p class="ref">Galatians 4:12&ndash;20 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;My little children, for whom I labor in birth again until Christ is formed in you.&rdquo;</p>
+      <span class="keyverse__cite">Galatians 4:19</span>
+    </div>
+
+    <div class="body">
+      <p>Up to this point in the letter, Paul has been almost entirely a scholar and prosecutor &mdash; sharp, relentless, unflinching. Here, suddenly, another side of him comes through. He reminds the Galatians of how warmly they once received him, arriving sick and struggling, and they treated him &ldquo;as an angel of God, even as Christ Jesus&rdquo; &mdash; he even suggests they would have plucked out their own eyes and given them to him, if it would have helped. That kind of love doesn&rsquo;t evaporate because of a hard letter. Paul asks, almost wounded, &ldquo;Have I therefore become your enemy because I tell you the truth?&rdquo; Real love and hard truth were never opposites for him. They came from the same place.</p>
+      <p>Then comes the tenderest line in the whole letter: &ldquo;My little children, for whom I labor in birth again until Christ is formed in you.&rdquo; Paul isn&rsquo;t satisfied with them merely believing correct doctrine on paper &mdash; he wants Christ&rsquo;s actual character, His essential shape, formed in them from the inside out. That&rsquo;s the difference between the Judaizers and Paul, and it&rsquo;s a difference worth noticing in yourself too: the Judaizers wanted a following, zealous for them; Paul wanted transformation, so that people would look increasingly like Jesus regardless of who got the credit. Real spiritual love isn&rsquo;t soft correction avoidance, and it isn&rsquo;t harsh correction without warmth. It&rsquo;s both, held together, aimed at one goal &mdash; that Christ would be formed in the person being loved.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Passage</h2>
+      <ol>
+        <li>Paul says real love and hard truth aren't opposites &mdash; they came from the same place in him. Is there someone you love where you've been avoiding a needed hard conversation out of fear it will look unloving?</li>
+        <li>Paul's goal wasn't correct belief alone, but "Christ formed in you" &mdash; actual transformed character. Is your own spiritual growth aimed at information, or at genuinely looking more like Jesus?</li>
+        <li>The Judaizers wanted a zealous following for themselves; Paul wanted people conformed to Christ regardless of credit. In your own influence over others (as a parent, leader, friend), which of those two are you actually cultivating?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full passage today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/gal/4/12/" target="_blank" rel="noopener">
+        Read Galatians 4:12-20 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO GALATIANS
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
