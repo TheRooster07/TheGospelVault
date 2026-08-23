@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Begun in the Spirit — Galatians 3:1-5 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1F3864;
+    --navy-deep: #16294A;
+    --green: #375623;
+    --green-soft: #F0F4EE;
+    --parchment: #FAF7EF;
+    --ink: #2B2B26;
+    --ink-soft: #565248;
+    --rule: #DCD5C2;
+    --gold: #A9832E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="marker">
+      <span class="marker__num">Galatians 06 of 16</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>Begun in the Spirit</h1>
+    <p class="ref">Galatians 3:1&ndash;5 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;Are you so foolish? Having begun in the Spirit, are you now being made perfect by the flesh?&rdquo;</p>
+      <span class="keyverse__cite">Galatians 3:3</span>
+    </div>
+
+    <div class="body">
+      <p>Paul doesn&rsquo;t open gently: &ldquo;O foolish Galatians! Who has bewitched you?&rdquo; He&rsquo;s not suggesting they&rsquo;ve literally been cursed &mdash; he&rsquo;s using shock to underline just how baffling their reversal is. These are people who had received him &ldquo;as an angel of God&rdquo; and would have &ldquo;plucked out their own eyes&rdquo; for him, by his own account later in the letter. And now, after all of that, after Christ Himself had been vividly preached and portrayed among them as crucified, they&rsquo;re turning back toward the law. Paul&rsquo;s first question cuts to the root of it all: &ldquo;Did you receive the Spirit by the works of the law, or by the hearing of faith?&rdquo; There&rsquo;s only one honest answer. No one has ever received the Holy Spirit by keeping rules. He came the moment they believed.</p>
+      <p>That makes Paul&rsquo;s next question almost devastating in its simplicity: if you started by faith, are you now foolish enough to think you finish by your own effort? &ldquo;Having begun in the Spirit, are you now being made perfect by the flesh?&rdquo; It&rsquo;s the same error dressed up differently &mdash; not abandoning Christ outright, but quietly assuming that grace got you started and now performance has to take it the rest of the way. Paul&rsquo;s closing question drives it home: the miracles God worked among them, did those come by law-keeping or by simply hearing and believing? The answer was obvious to them then. It should be just as obvious now, whenever the same subtle shift starts creeping into how you measure your own standing with God.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Passage</h2>
+      <ol>
+        <li>Paul asks whether they received the Spirit by works or by simply hearing and believing. If someone asked you the same question about your own salvation today, would your daily habits of thought reflect the same answer?</li>
+        <li>The Galatians began in the Spirit but were slipping into finishing by the flesh &mdash; assuming performance had to complete what grace started. Where might you be doing the same thing, even subtly?</li>
+        <li>Paul reminds them of the miracles and evident work of God they'd already witnessed by faith alone. What has God already done in your life that you can point back to as evidence grace, not effort, is what's actually at work?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full passage today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/gal/3/1/" target="_blank" rel="noopener">
+        Read Galatians 3:1-5 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO GALATIANS
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
