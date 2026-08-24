@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lord of Peace Himself — 2 Thessalonians 3:13-18 | Vault Devotional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1F3864;
+    --navy-deep: #16294A;
+    --green: #375623;
+    --green-soft: #F0F4EE;
+    --parchment: #FAF7EF;
+    --ink: #2B2B26;
+    --ink-soft: #565248;
+    --rule: #DCD5C2;
+    --gold: #A9832E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="marker">
+      <span class="marker__num">2 Thessalonians 07 of 07</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>The Lord of Peace Himself</h1>
+    <p class="ref">2 Thessalonians 3:13&ndash;18 &nbsp;&middot;&nbsp; NASB95</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;Now may the Lord of peace Himself give you peace always in every way. The Lord be with you all.&rdquo;</p>
+      <span class="keyverse__cite">2 Thessalonians 3:16</span>
+    </div>
+
+    <div class="body">
+      <p>Paul turns from the disorderly minority to the faithful majority still doing the hard, ordinary work of the church and their families: &ldquo;do not grow weary in doing good.&rdquo; He knows that doing good, sustained over time, gets tiring &mdash; but the tiredness is never a reason to grow tired <em>of</em> doing good itself. For those who refuse to listen even to this letter&rsquo;s correction, Paul does describe a form of church discipline &mdash; but he&rsquo;s careful to define its purpose and its limits. The goal is never punishment for its own sake. It&rsquo;s that the person might feel appropriate shame and be restored. &ldquo;Do not count him as an enemy,&rdquo; Paul insists, &ldquo;but admonish him as a brother.&rdquo; Family correcting family, not enemies casting each other out.</p>
+      <p>The letter closes with a benediction stacked three deep across its final verses &mdash; peace, presence, and grace. &ldquo;Now may the Lord of peace Himself give you peace always in every way. The Lord be with you all.&rdquo; Then Paul signs it in his own hand, a mark of authenticity in every letter he wrote, and closes with the same word he began with: &ldquo;The grace of our Lord Jesus Christ be with you all.&rdquo; A church that had been shaken by confusion, worn down by persecution, and troubled by some walking in disorder, is sent off not with a final warning, but with peace, presence, and grace &mdash; the same three things that were true of them from the very first verse of the letter.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry Into the Passage</h2>
+      <ol>
+        <li>Paul distinguishes admonishing someone "as a brother" from treating them "as an enemy." When you've had to confront someone about their behavior, which posture more accurately described your approach?</li>
+        <li>"Do not grow weary in doing good" assumes the weariness is real and expected, not a sign something's wrong. Is there a good work you've been tempted to abandon simply because it's become tiring, rather than because it stopped being right?</li>
+        <li>This letter, which opened and closed with grace, spent most of its length correcting confusion and disorder. What does it teach you about how correction and grace can coexist in the same relationship, rather than being opposites?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full passage today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/2th/3/13/" target="_blank" rel="noopener">
+        Read 2 Thessalonians 3:13-18 &middot; NASB95 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; DEVOTIONAL COMPANION TO 2 THESSALONIANS
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
