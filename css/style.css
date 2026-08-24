@@ -272,7 +272,7 @@ a.card:hover h3 { color: var(--color-gold-light); }
 
 .devo-list__item a {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 20px;
   padding: 20px 4px;
   text-decoration: none;
@@ -300,6 +300,7 @@ a.card:hover h3 { color: var(--color-gold-light); }
 }
 
 .devo-list__title {
+  display: block;
   font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 600;
@@ -308,7 +309,15 @@ a.card:hover h3 { color: var(--color-gold-light); }
 }
 
 .devo-list__ref {
+  display: block;
   font-size: 13px;
+  color: var(--color-cream-dim);
+  margin: 0 0 6px;
+}
+
+.devo-list__desc {
+  display: block;
+  font-size: 14px;
   color: var(--color-cream-dim);
 }
 
