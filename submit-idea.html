@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Your Idea | Vault 10 — Ideas &amp; Blog | The Gospel Vault</title>
+<meta name="description" content="Submit a post, reflection, or idea for Vault 10 on The Gospel Vault. Every submission is reviewed before it's published.">
+<link rel="canonical" href="https://thegospelvault.com/submit-idea.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Gospel Vault">
+<meta property="og:title" content="Submit Your Idea | The Gospel Vault">
+<meta property="og:description" content="Submit a post, reflection, or idea for Vault 10. Every submission is reviewed before it's published.">
+<meta property="og:url" content="https://thegospelvault.com/submit-idea.html">
+<meta property="og:image" content="https://thegospelvault.com/assets/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Submit Your Idea | The Gospel Vault">
+<meta name="twitter:description" content="Submit a post, reflection, or idea for Vault 10. Every submission is reviewed before it's published.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Submit Your Idea",
+  "url": "https://thegospelvault.com/submit-idea.html",
+  "isPartOf": { "@type": "WebSite", "name": "The Gospel Vault", "url": "https://thegospelvault.com/" }
+}
+</script>
+</head>
+<body>
+
+<!--
+  ============================================================
+  DRAFT — Vault 10 submission form mockup (2026-09-17)
+  New page, not yet linked from the global nav. Follows the exact
+  Formspree + fetch() pattern already used on contact.html, sharing
+  the same endpoint with its own _subject line so submissions are
+  easy to spot in the Formspree dashboard. NOTHING here publishes to
+  the site automatically — this only sends BRC an email. He (or
+  Claude, on his instruction) builds and pushes an approved post the
+  same way every other page on the site gets built.
+  ============================================================
+-->
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">The Gospel <span>Vault</span></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <details>
+            <summary class="active">Vaults</summary>
+            <ul class="dropdown-menu">
+              <li><a href="vault.html">All Vaults</a></li>
+              <li><a href="vault-1-gospel.html">Vault 1 — The Gospel</a></li>
+              <li><a href="vault-2-devotions.html">Vault 2 — Devotions</a></li>
+              <li><a href="vault-3-bible-studies.html">Vault 3 — NT Book Studies</a></li>
+              <li><a href="vault-4-ot-book-studies.html">Vault 4 — OT Book Studies</a></li>
+              <li><a href="vault-5-topical-studies.html">Vault 5 — Topical Studies</a></li>
+              <li><a href="vault-6-resource-links.html">Vault 6 — Resource Links</a></li>
+              <li><a href="vault-7-ministry-supporters.html">Vault 7 — Ministry Supporters</a></li>
+              <li><a href="vault-8-future.html">Vault 8 — Coming Soon</a></li>
+              <li><a href="vault-9-future.html">Vault 9 — Missions and Diaspora Groups</a></li>
+              <li><a href="vault-10-ideas-blog.html" class="active">Vault 10 — Ideas &amp; Blog</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="dropdown">
+          <details>
+            <summary>About</summary>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About</a></li>
+              <li><a href="statement-of-faith.html">Statement of Faith</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Vault 10 — Ideas &amp; Blog</p>
+    <h1>Submit Your Idea</h1>
+    <p class="lead">Share a reflection, a question, or an idea for Vault 10. Every submission is read by
+    The Gospel Vault team before anything is published — nothing goes live automatically, and we may follow
+    up with questions or edits before a post is posted.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <!--
+      Submits via the same Formspree endpoint as contact.html
+      (https://formspree.io/f/mbgraalp) — no inbox address exposed in
+      the page source. This form's own hidden _subject value keeps
+      these submissions distinct from ordinary contact messages in
+      the Formspree dashboard. Handled with fetch() so the page
+      doesn't reload; visitor sees an inline confirmation instead.
+    -->
+    <form id="submit-idea-form" action="https://formspree.io/f/mbgraalp" method="POST">
+      <input type="hidden" name="_subject" value="New Vault 10 submission — The Gospel Vault">
+      <div class="form-row">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <p class="form-note">So we can follow up if your post needs anything before it's published.</p>
+      </div>
+      <div class="form-row">
+        <label for="post_title">Post Title</label>
+        <input type="text" id="post_title" name="post_title" required>
+      </div>
+      <div class="form-row">
+        <label for="post_body">Your Idea or Reflection</label>
+        <textarea id="post_body" name="post_body" rows="10" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="credit">How should you be credited?</label>
+        <input type="text" id="credit" name="credit" placeholder="e.g. your name, initials, or &quot;Anonymous&quot;">
+      </div>
+      <div class="form-row" style="text-align:center;">
+        <button type="submit" class="btn btn-primary">Submit for Review</button>
+        <p class="form-note">We read every submission. Not every one will be published, and we'll reach out
+        first if we'd like to edit or trim yours before it goes up.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vault.html">Vault</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p>Copyright &copy; 2026 The Gospel Vault. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script>
+  (function () {
+    var form = document.getElementById('submit-idea-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var note = form.querySelector('.form-row:last-child .form-note');
+      submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.innerHTML = '<div class="notice">Thanks — your submission is on its way. We read every one and will follow up if we have questions or want to publish it.</div>';
+        } else {
+          submitBtn.disabled = false;
+          if (note) { note.textContent = "Something went wrong sending that — please try again in a few minutes."; }
+        }
+      }).catch(function () {
+        submitBtn.disabled = false;
+        if (note) { note.textContent = "Something went wrong sending that — please try again in a few minutes."; }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
