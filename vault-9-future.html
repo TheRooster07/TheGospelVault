@@ -4,156 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vault 9 — Missions and Diaspora Groups | The Gospel Vault</title>
-<meta name="description" content="Vault 9 — Missions and Diaspora Groups: a ranked master list of 17 unreached diaspora people groups by population, with host-country reach and Bible-translation status for each. Country-level population figures and openness ratings are withheld for the safety of these communities.">
+<meta name="description" content="Vault 9 — Missions and Diaspora Groups: 17 unreached diaspora people groups ranked by population, with homeland population, diaspora population, and number of host countries for each.">
 <link rel="canonical" href="https://thegospelvault.com/vault-9-future.html">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The Gospel Vault">
 <meta property="og:title" content="Vault 9 — Missions and Diaspora Groups | The Gospel Vault">
-<meta property="og:description" content="A ranked master list of 17 unreached diaspora people groups by population, with host-country reach and Bible-translation status for each.">
+<meta property="og:description" content="17 unreached diaspora people groups ranked by population, with homeland population, diaspora population, and number of host countries for each.">
 <meta property="og:url" content="https://thegospelvault.com/vault-9-future.html">
 <meta property="og:image" content="https://thegospelvault.com/assets/og-image.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vault 9 — Missions and Diaspora Groups | The Gospel Vault">
-<meta name="twitter:description" content="A ranked master list of 17 unreached diaspora people groups by population, with host-country reach and Bible-translation status for each.">
+<meta name="twitter:description" content="17 unreached diaspora people groups ranked by population, with homeland population, diaspora population, and number of host countries for each.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 <style>
-  /* Vault 9 — Diaspora master list, scoped to this page */
-  .study-table-wrap { max-width: 900px; }
-
-  .correction-note, .safety-note {
-    max-width: 720px;
-    margin: 32px auto 0;
-    background: var(--color-panel);
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-gold);
-    border-radius: 6px;
-    padding: 22px 26px;
-  }
-  .correction-note .label, .safety-note .label {
-    display: block;
-    color: var(--color-gold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.72rem;
-    margin-bottom: 8px;
-  }
-  .correction-note p, .safety-note p { margin: 0; font-size: 0.92rem; }
-  .safety-note { max-width: 900px; margin: 0 auto 40px; }
-
-  .table-footnotes {
-    max-width: 900px;
-    margin: 18px auto 0;
-    font-size: 0.8rem;
-    color: var(--color-cream-dim);
-    opacity: 0.85;
-  }
-  .table-footnotes p { margin: 0 0 8px; color: inherit; }
-
-  .quick-jump {
-    max-width: 900px;
-    margin: 0 auto 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-  }
-  .jump-chip {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 30px;
-    height: 30px;
-    padding: 0 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    color: var(--color-gold-light);
-    font-size: 0.82rem;
-    font-weight: 600;
-  }
-  .jump-chip:hover { background: rgba(201,162,75,0.12); border-color: var(--color-gold); text-decoration: none; }
-
-  .group-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-  .group-block {
-    background: var(--color-panel);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 4px 22px;
-  }
-  .group-block summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 16px 0;
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-  .group-block summary::-webkit-details-marker { display: none; }
-  .group-block[open] summary { border-bottom: 1px solid var(--color-border); }
-  .group-rank {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 26px;
-    height: 26px;
-    border: 1px solid var(--color-gold);
-    border-radius: 50%;
-    color: var(--color-gold);
-    font-size: 0.78rem;
-    font-weight: 600;
-    flex-shrink: 0;
-  }
-  .group-name {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--color-cream);
-    font-size: 1.05rem;
-  }
-  .group-stats { color: var(--color-cream-dim); font-size: 0.85rem; }
-  .group-body { padding: 22px 0 26px; }
-  .group-facts { margin: 0 0 24px; }
-  .group-facts > div { margin-bottom: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .group-facts dt {
-    color: var(--color-gold);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    min-width: 130px;
-    flex-shrink: 0;
-  }
-  .group-facts dd { margin: 0; color: var(--color-cream-dim); font-size: 0.9rem; }
-  .group-caveat {
-    font-size: 0.85rem;
-    color: var(--color-cream-dim);
-    opacity: 0.9;
-    font-style: italic;
-    margin: 16px 0 0;
-  }
-  .priority-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
-  .priority-tag {
-    display: inline-block;
-    padding: 6px 14px;
-    border: 1px solid var(--color-gold);
-    border-radius: 20px;
-    color: var(--color-gold-light);
-    font-size: 0.82rem;
-    font-weight: 600;
-  }
+  .study-table-wrap { max-width: 980px; }
 </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Vault 9 — Missions and Diaspora Groups: Diaspora People Groups Master List",
-  "description": "A ranked master list of 17 unreached diaspora people groups by population, with host-country reach and Bible-translation status for each. Country-level population figures and openness ratings are withheld for the safety of these communities.",
+  "headline": "Vault 9 — Missions and Diaspora Groups",
+  "description": "17 unreached diaspora people groups ranked by population, with homeland population, diaspora population, and number of host countries for each.",
   "url": "https://thegospelvault.com/vault-9-future.html",
   "isPartOf": { "@type": "WebSite", "name": "The Gospel Vault", "url": "https://thegospelvault.com/" },
   "author": { "@type": "Organization", "name": "The Gospel Vault" },
@@ -207,422 +85,25 @@
   <div class="container">
     <p class="eyebrow">Vault 9</p>
     <h1>Missions and Diaspora Groups</h1>
-    <p class="lead">A ranked master list of 17 unreached diaspora people groups, sized by population and mapped across every host country, so the pattern of where the need and opportunity are greatest is visible at a glance.</p>
-    <p class="scripture-note">Mission Research Project &middot; August 2026, corrected September 2026</p>
+    <p class="lead">17 unreached diaspora people groups, ranked by population, with each group's homeland population, diaspora population, and number of host countries.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div class="devo-body">
-      <h2>Purpose</h2>
-      <p>Mission Research Project · 17 unreached diaspora people groups — Afghan, general plus the 16 others flagged elsewhere in this project — each shown with every host country, its population, whether that host country is Free / Partly Free / Not Free (Freedom House), and the New Testament / Bible status in the group’s language · August 2026</p>
+    <div class="devo-body" style="margin-bottom:32px;">
+      <p>Country-by-country population figures and openness ratings are intentionally left off this page for the safety of these communities. Full detail is kept for internal planning only.</p>
     </div>
-    <div class="correction-note">
-      <span class="label">Correction &middot; September 2026</span>
-      <p>Correction (September 2026): the Afghan, general entry’s diaspora total and 7 of its 21 host-country population figures (Germany, United States, United Kingdom, Canada, France, Australia, Sweden) were updated from Joshua Project’s undated tracked figures to current, dated diaspora estimates, after a presentation-deck consistency review found Joshua Project’s own pages carry no year or source for these figures and read as stale pre-2021-refugee-surge snapshots. See the Afghan, general entry below (§11) and Presentation_Consistency_Review.md for the full comparison and methodology. The other 16 entries in this document have not been re-verified and remain Joshua Project figures as originally sourced, August 2026.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt" id="ranked-summary">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Ranked by Population</span>
-      <h2>Ranked Summary</h2>
-    </div>
-    <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Rank</th><th>People Group</th><th>Homeland</th><th>Diaspora Population</th><th>Host Countries</th><th>NT / Bible Status</th></tr></thead><tbody><tr><td>1</td><td>Uzbek, Northern</td><td>Uzbekistan</td><td>4,397,000</td><td>12</td><td>Complete Bible</td></tr><tr><td>2</td><td>Hausa</td><td>Nigeria &amp; Niger (cross-border ethnic homeland)</td><td>4,290,000</td><td>14</td><td>Complete Bible</td></tr><tr><td>3</td><td>Persian</td><td>Iran</td><td>4,129,400</td><td>38</td><td>Complete Bible</td></tr><tr><td>4</td><td>Tamil (Hindu traditions)</td><td>India (no JP homeland row — see caveat)</td><td>3,730,200</td><td>25</td><td>Complete Bible</td></tr><tr><td>5</td><td>Tajik</td><td>Tajikistan</td><td>3,405,800</td><td>14</td><td>Complete Bible</td></tr><tr><td>6</td><td>Gujarati</td><td>India (no JP homeland row — see caveat)</td><td>2,960,000</td><td>22</td><td>Complete Bible</td></tr><tr><td>7</td><td>Hindi</td><td>India (no JP homeland row — see caveat)</td><td>2,795,500</td><td>16</td><td>Complete Bible</td></tr><tr><td>8</td><td>Punjabi, Eastern</td><td>India, Punjab (no JP homeland row — see caveat)</td><td>2,064,400</td><td>21</td><td>Complete Bible in Eastern/Gurmukhi Punjabi (O.V. Bible, Bible Society of India; Punjabi Standard Bible). New-Testament-only in Western/Shahmukhi Punjabi (PAN2020, Pakistan Bible Society)</td></tr><tr><td>9</td><td>Khmer</td><td>Cambodia (included directly in this JP entry)</td><td>1,995,900</td><td>13</td><td>Complete Bible</td></tr><tr><td>10</td><td>Japanese</td><td>Japan</td><td>1,940,200</td><td>37</td><td>Complete Bible</td></tr><tr><td>11</td><td>Afghan, general</td><td>Afghanistan</td><td>1,878,100†</td><td>21</td><td>Complete Bible in Dari</td></tr><tr><td>12</td><td>Telugu</td><td>India (no JP homeland row — see caveat)</td><td>1,758,800</td><td>13</td><td>Complete Bible</td></tr><tr><td>13</td><td>Bosniak (Bosnian Muslim)</td><td>Bosnia-Herzegovina</td><td>1,559,000</td><td>19</td><td>Complete Bible</td></tr><tr><td>14</td><td>Arab, Iraqi</td><td>Iraq</td><td>1,387,800</td><td>20</td><td>New Testament only in Mesopotamian/Iraqi Arabic dialect (bible.com code acm). Complete Bible available in Modern Standard Arabic (e.g. Van Dyck Arabic Bible), in which most Iraqi Arabs are also literate</td></tr><tr><td>15</td><td>Thai (Central)</td><td>Thailand (Central Thai/Siamese only — see caveat)</td><td>1,131,900</td><td>25</td><td>Complete Bible</td></tr><tr><td>16</td><td>Pashtun, Northern</td><td>Afghanistan (Pakistan is shared homeland, not diaspora — see caveat)</td><td>1,071,700 (adjusted, excl. Pakistan)</td><td>14</td><td>New-Testament-only in Afghan Pashto</td></tr><tr><td>17</td><td>Hazara</td><td>Afghanistan</td><td>949,800</td><td>10</td><td>New-Testament-only</td></tr></tbody></table></div>
-    <div class="table-footnotes">
-      <p>“Diaspora Population” = the group’s population in every country other than its homeland, per Joshua Project. Five groups have no unified homeland row in Joshua Project at all (see each group’s caveat); their homeland populations are general demographic estimates, not JP figures, and are excluded from this total by definition.</p>
-      <p>† Afghan, general’s rank moved from #14 to #11 as a direct result of the September 2026 correction described above — its Joshua-Project-only total was 1,289,100; on the corrected, current-estimate basis it is 1,878,100. No other group’s rank changed.</p>
-    </div>
-  </div>
-</section>
-
-<section id="groups">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Group by Group</span>
-      <h2>The 17 Groups, In Detail</h2>
-    </div>
-    <div class="safety-note">
-      <span class="label">A Note On What&rsquo;s Shown Here</span>
-      <p>Country-by-country population figures and each host country&rsquo;s political-openness rating (Freedom House) have been withheld from this public page. Many of these groups live in restrictive or hostile settings, and publishing exact headcounts alongside a rating of how closed a country is could help identify and put at risk the very believers and local contacts this research exists to serve. Each group&rsquo;s host countries and Joshua Project reach status (Unreached / Frontier / Partially Reached / Significantly Reached) are shown below; full population and openness data is retained for internal planning only.</p>
-    </div>
-    <div class="quick-jump">
-      <a class="jump-chip" href="#group-1">1</a>
-          <a class="jump-chip" href="#group-2">2</a>
-          <a class="jump-chip" href="#group-3">3</a>
-          <a class="jump-chip" href="#group-4">4</a>
-          <a class="jump-chip" href="#group-5">5</a>
-          <a class="jump-chip" href="#group-6">6</a>
-          <a class="jump-chip" href="#group-7">7</a>
-          <a class="jump-chip" href="#group-8">8</a>
-          <a class="jump-chip" href="#group-9">9</a>
-          <a class="jump-chip" href="#group-10">10</a>
-          <a class="jump-chip" href="#group-11">11</a>
-          <a class="jump-chip" href="#group-12">12</a>
-          <a class="jump-chip" href="#group-13">13</a>
-          <a class="jump-chip" href="#group-14">14</a>
-          <a class="jump-chip" href="#group-15">15</a>
-          <a class="jump-chip" href="#group-16">16</a>
-          <a class="jump-chip" href="#group-17">17</a>
-    </div>
-    <div class="group-list">
-      
-      <details class="group-block" id="group-1">
-        <summary>
-          <span class="group-rank">1</span>
-          <span class="group-name">Uzbek, Northern</span>
-          <span class="group-stats">4,397,000 across 12 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Uzbekistan — 30,745,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Muqaddas Kitob (Uzbek Cyrillic, Institute for Bible Translation, 2016; reprinted/corrected 2018–2020).</dd></div>
-            <div><dt>Source</dt><dd>JP 14039; bible.com/languages/uzn</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Tajikistan</td><td>Unreached</td></tr><tr><td>Kyrgyzstan</td><td>Unreached</td></tr><tr><td>Kazakhstan</td><td>Unreached/Frontier</td></tr><tr><td>Turkmenistan</td><td>Unreached</td></tr><tr><td>Russia</td><td>Unreached</td></tr><tr><td>Pakistan</td><td>Unreached/Frontier</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Korea, South</td><td>Unreached</td></tr><tr><td>Mongolia</td><td>Unreached/Frontier</td></tr><tr><td>China</td><td>Unreached</td></tr><tr><td>Germany</td><td>Unreached/Frontier</td></tr><tr><td>Ukraine</td><td>Unreached/Frontier</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> No Afghanistan row under this ID. Afghanistan’s ethnic Uzbek population is tracked separately as “Uzbek, Southern” (JP 15756), spread across Afghanistan, Türkiye, the United States, and Azerbaijan.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-2">
-        <summary>
-          <span class="group-rank">2</span>
-          <span class="group-name">Hausa</span>
-          <span class="group-stats">4,290,000 across 14 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Nigeria &amp; Niger (cross-border ethnic homeland) — 41,077,000 + 15,155,000 = 56,232,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Littafi Mai Tsarki (standard Hausa Bible; also distributed as YouVersion audio Bible).</dd></div>
-            <div><dt>Source</dt><dd>JP 12070; bible.com/languages/hau</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Côte d’Ivoire</td><td>Unreached/Frontier</td></tr><tr><td>Benin</td><td>Unreached</td></tr><tr><td>Cameroon</td><td>Unreached/Frontier</td></tr><tr><td>Chad</td><td>Unreached/Frontier</td></tr><tr><td>Ghana</td><td>Unreached/Frontier</td></tr><tr><td>Sudan</td><td>Unreached/Frontier</td></tr><tr><td>Equatorial Guinea</td><td>Unreached/Frontier</td></tr><tr><td>Central African Republic</td><td>Unreached/Frontier</td></tr><tr><td>Italy</td><td>Unreached</td></tr><tr><td>Togo</td><td>Unreached</td></tr><tr><td>Gabon</td><td>Unreached</td></tr><tr><td>Congo, Republic of</td><td>Unreached</td></tr><tr><td>Gambia</td><td>Unreached</td></tr><tr><td>Algeria</td><td>Unreached/Frontier</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Every tracked country, homeland included, is Unreached or Frontier — the most extreme pattern of any group in this list. Equatorial Guinea’s figure matches Africa_Support_vs_Create.docx, confirming this ID.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-3">
-        <summary>
-          <span class="group-rank">3</span>
-          <span class="group-name">Persian</span>
-          <span class="group-stats">4,129,400 across 38 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Iran — 44,675,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Today’s Persian Version (TPV, 1976/2007); also Old Persian Version (1846/1895) and New Millennium Version (2014).</dd></div>
-            <div><dt>Source</dt><dd>JP 14371; bible.com/languages/pes</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Afghanistan</td><td>Unreached</td></tr><tr><td>Iraq</td><td>Unreached</td></tr><tr><td>United Arab Emirates</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Qatar</td><td>Frontier</td></tr><tr><td>Germany</td><td>Partially Reached</td></tr><tr><td>Saudi Arabia</td><td>Unreached</td></tr><tr><td>Bahrain</td><td>Unreached</td></tr><tr><td>Canada</td><td>Partially Reached</td></tr><tr><td>Türkiye</td><td>Unreached</td></tr><tr><td>Oman</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Kuwait</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Syria</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Sweden</td><td>Partially Reached</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Uzbekistan</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> The United States figure is well below Census/community estimates for Iranian ancestry; not all Iranian-Americans are ethnically Persian. Türkiye may also be undercounted. Table shows the top 20 of 38 tracked countries; the rest are smaller populations not shown here.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-4">
-        <summary>
-          <span class="group-rank">4</span>
-          <span class="group-name">Tamil (Hindu traditions)</span>
-          <span class="group-stats">3,730,200 across 25 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>India (no JP homeland row — see caveat) — ~72–77M general estimate, not a JP figure</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — O.V. Reference Bible (Bible Society of India), Indian Revised Version (2019), Tamil Easy-to-Read Version.</dd></div>
-            <div><dt>Source</dt><dd>JP 18211; bible.com/languages/tam</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Malaysia</td><td>Partially Reached</td></tr><tr><td>United Arab Emirates</td><td>Partially Reached</td></tr><tr><td>Myanmar</td><td>Partially Reached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Singapore</td><td>Unreached</td></tr><tr><td>United States</td><td>Minimally Reached</td></tr><tr><td>Fiji</td><td>Partially Reached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Saudi Arabia</td><td>Minimally Reached</td></tr><tr><td>Sri Lanka</td><td>Minimally Reached</td></tr><tr><td>Bahrain</td><td>Partially Reached</td></tr><tr><td>Thailand</td><td>Minimally Reached</td></tr><tr><td>South Africa</td><td>Minimally Reached</td></tr><tr><td>Germany</td><td>Partially Reached</td></tr><tr><td>Qatar</td><td>Partially Reached</td></tr><tr><td>Canada</td><td>Partially Reached</td></tr><tr><td>Italy</td><td>Partially Reached</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Oman</td><td>Minimally Reached</td></tr><tr><td>New Zealand</td><td>Unreached/Frontier</td></tr><tr><td>Vietnam</td><td>Minimally Reached</td></tr><tr><td>Switzerland</td><td>Unreached/Frontier</td></tr><tr><td>Sweden</td><td>Unreached</td></tr><tr><td>Ireland</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> India absent — JP splits India’s Tamil population across dozens of caste-specific entries. Sri Lanka is severely undercounted here and is tracked instead under three separate Sri Lanka-specific JP entries.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-5">
-        <summary>
-          <span class="group-rank">5</span>
-          <span class="group-name">Tajik</span>
-          <span class="group-stats">3,405,800 across 14 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Tajikistan — 9,060,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Kitobi Muqaddas 1992 (Institute for Bible Translation), still the standard text; newer Ahdi Nav 2021 NT revision also exists.</dd></div>
-            <div><dt>Source</dt><dd>JP 15201; bible.com/languages/tgk</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Uzbekistan</td><td>Unreached/Frontier</td></tr><tr><td>Pakistan</td><td>Unreached/Frontier</td></tr><tr><td>Russia</td><td>Unreached</td></tr><tr><td>Iran</td><td>Unreached/Frontier</td></tr><tr><td>Kyrgyzstan</td><td>Unreached/Frontier</td></tr><tr><td>Kazakhstan</td><td>Unreached</td></tr><tr><td>Sweden</td><td>Unreached/Frontier</td></tr><tr><td>Turkmenistan</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Türkiye</td><td>Unreached/Frontier</td></tr><tr><td>Germany</td><td>Unreached</td></tr><tr><td>Belarus</td><td>Unreached/Frontier</td></tr><tr><td>Belgium</td><td>Unreached/Frontier</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Excludes Afghanistan entirely — Afghanistan’s ethnic Tajik population (the group’s 2nd-largest) sits under a separate JP entry, “Afghan, Tajik” (JP 14372), combining Afghanistan and Iran.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-6">
-        <summary>
-          <span class="group-rank">6</span>
-          <span class="group-name">Gujarati</span>
-          <span class="group-stats">2,960,000 across 22 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>India (no JP homeland row — see caveat) — ~46–49M general estimate, not a JP figure</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — O.V. Reference Bible (Bible Society of India), Gujarati Contemporary/Samkalin Bible, Indian Revised Version (2019).</dd></div>
-            <div><dt>Source</dt><dd>JP 11982; bible.com/languages/guj</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Tanzania</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>Madagascar</td><td>Unreached</td></tr><tr><td>Malawi</td><td>Unreached</td></tr><tr><td>Oman</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Kenya</td><td>Unreached</td></tr><tr><td>Mozambique</td><td>Unreached</td></tr><tr><td>Zambia</td><td>Unreached</td></tr><tr><td>Iran</td><td>Unreached</td></tr><tr><td>Myanmar</td><td>Unreached</td></tr><tr><td>South Africa</td><td>Unreached</td></tr><tr><td>Zimbabwe</td><td>Partially Reached</td></tr><tr><td>Bahrain</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Uganda</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Fiji</td><td>Minimally Reached</td></tr><tr><td>Portugal</td><td>Unreached</td></tr><tr><td>Réunion</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> India absent — Gujarati speakers within India are tracked through caste-specific JP entries (Brahmin Gujarati, Bania Gujar, Lohana, Koli of Gujarat, etc.), not one umbrella row.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-7">
-        <summary>
-          <span class="group-rank">7</span>
-          <span class="group-name">Hindi</span>
-          <span class="group-stats">2,795,500 across 16 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>India (no JP homeland row — see caveat) — ~528M+ general estimate, not a JP figure</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Hindi Holy Bible, Indian Revised Version (2019), Easy-to-Read Version, Bible Society of India editions.</dd></div>
-            <div><dt>Source</dt><dd>JP 12106; bible.com/languages/hin</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United States</td><td>Unreached</td></tr><tr><td>South Africa</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>Saudi Arabia</td><td>Unreached</td></tr><tr><td>Myanmar</td><td>Unreached</td></tr><tr><td>Indonesia</td><td>Unreached</td></tr><tr><td>Tanzania</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Frontier</td></tr><tr><td>Mozambique</td><td>Frontier</td></tr><tr><td>Mauritius</td><td>Unreached</td></tr><tr><td>Thailand</td><td>Unreached</td></tr><tr><td>Oman</td><td>Unreached</td></tr><tr><td>Panama</td><td>Minimally Reached</td></tr><tr><td>Singapore</td><td>Unreached</td></tr><tr><td>Uganda</td><td>Partially Reached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> India absent, same pattern as Gujarati — Hindi-speaking Hindus in India are fragmented across dozens of caste entries. Australia is notably absent from this table entirely, suggesting Hindi speakers there are captured under other JP entries.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-8">
-        <summary>
-          <span class="group-rank">8</span>
-          <span class="group-name">Punjabi, Eastern</span>
-          <span class="group-stats">2,064,400 across 21 countries &middot; Complete Bible (Eastern) &middot; NT Only (Western)</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>India, Punjab (no JP homeland row — see caveat) — ~30M general estimate, not a JP figure</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible in Eastern/Gurmukhi Punjabi (O.V. Bible, Bible Society of India; Punjabi Standard Bible). New-Testament-only in Western/Shahmukhi Punjabi (PAN2020, Pakistan Bible Society) — Old Testament still in progress.</dd></div>
-            <div><dt>Source</dt><dd>JP 14483 (Eastern); JP 15382 (Western, not tabulated); bible.com/languages/pan, /pnb</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United States</td><td>Unreached</td></tr><tr><td>Saudi Arabia</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>United Arab Emirates</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Tanzania</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Frontier</td></tr><tr><td>Japan</td><td>Unreached</td></tr><tr><td>Thailand</td><td>Frontier</td></tr><tr><td>Oman</td><td>Unreached</td></tr><tr><td>Iran</td><td>Unreached</td></tr><tr><td>Mauritius</td><td>Unreached</td></tr><tr><td>Singapore</td><td>Frontier</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Kuwait</td><td>Unreached</td></tr><tr><td>Kenya</td><td>Unreached</td></tr><tr><td>Myanmar</td><td>Unreached</td></tr><tr><td>Fiji</td><td>Minimally Reached</td></tr><tr><td>Afghanistan</td><td>Unreached</td></tr><tr><td>Réunion</td><td>Minimally Reached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Largest apparent undercount in this list — Canada’s real Punjabi/Sikh diaspora is substantially higher than tracked here, because JP tracks Punjabi religious/caste sub-groups (e.g. “Jat, Sikh traditions, in Canada”) as separate profiles outside this row. Likely applies to UK, US, and Australia too.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-9">
-        <summary>
-          <span class="group-rank">9</span>
-          <span class="group-name">Khmer</span>
-          <span class="group-stats">1,995,900 across 13 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Cambodia (included directly in this JP entry) — 15,791,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Khmer Standard Version 2005 (Bible Society of Cambodia/UBS), plus the original 1954 Khmer Bible.</dd></div>
-            <div><dt>Source</dt><dd>JP 12662; bible.com/languages/khm</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Vietnam</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Thailand</td><td>Unreached</td></tr><tr><td>Korea, South</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Japan</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>Germany</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Laos</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> None significant — one of the cleaner entries in this list; homeland and diaspora figures both track reasonably well against independent estimates.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-10">
-        <summary>
-          <span class="group-rank">10</span>
-          <span class="group-name">Japanese</span>
-          <span class="group-stats">1,940,200 across 37 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Japan — 117,111,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — multiple standard versions since 1887, incl. Japan Bible Society Interconfessional Version (2018) and New Japanese Bible (1970/2017).</dd></div>
-            <div><dt>Source</dt><dd>JP 12322; bible.com/languages/jpn</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United States</td><td>Significantly Reached</td></tr><tr><td>Brazil</td><td>Significantly Reached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>Thailand</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Peru</td><td>Unreached</td></tr><tr><td>Korea, South</td><td>Unreached</td></tr><tr><td>Argentina</td><td>Minimally Reached</td></tr><tr><td>Singapore</td><td>Unreached</td></tr><tr><td>Germany</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Philippines</td><td>Unreached</td></tr><tr><td>Russia</td><td>Unreached</td></tr><tr><td>Bolivia</td><td>Partially Reached</td></tr><tr><td>Indonesia</td><td>Unreached</td></tr><tr><td>Taiwan</td><td>Unreached</td></tr><tr><td>Guam</td><td>Unreached</td></tr><tr><td>Palau</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> None significant — Japanese emigration is long-documented (not refugee-driven); figures broadly match known community sizes, including the small Palau and Guam populations already flagged in Pacific_Australia_Support_vs_Create.docx. Table shows top 21 of 37 tracked countries.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-11">
-        <summary>
-          <span class="group-rank">11</span>
-          <span class="group-name">Afghan, general</span>
-          <span class="group-stats">1,878,100 across 21 countries &middot; Complete Bible (Dari) &middot; NT Only (Pashto)</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Afghanistan — (see Afghan_Diaspora_Digital_Footprint_Pilot.docx)</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible in Dari — Today’s Dari Version (TDV, Pamir Ministries). New-Testament-only in Pashto — Afghan Pashto Bible (APB, Pamir/Pakistan Bible Society); Old Testament still in progress.</dd></div>
-            <div><dt>Source</dt><dd>JP 19314; Wikipedia, “Afghan diaspora,” https://en.wikipedia.org/wiki/Afghan_diaspora, accessed September 2026; Afghan_Diaspora_Digital_Footprint_Pilot.docx (this project)</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Türkiye</td><td>Unreached</td></tr><tr><td>Germany</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached/Frontier</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Greece</td><td>Unreached</td></tr><tr><td>Austria</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Belgium</td><td>Unreached</td></tr><tr><td>Denmark</td><td>Unreached</td></tr><tr><td>Switzerland</td><td>Unreached</td></tr><tr><td>Italy</td><td>Unreached</td></tr><tr><td>Norway</td><td>Unreached</td></tr><tr><td>Sweden</td><td>Unreached</td></tr><tr><td>United Arab Emirates</td><td>Unreached</td></tr><tr><td>Finland</td><td>Unreached</td></tr><tr><td>Tajikistan</td><td>Unreached</td></tr><tr><td>Russia</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat">*Corrected September 2026 — see caveat below.</p><p class="group-caveat"><strong>Caveat:</strong> Population figures for seven of these 21 countries (Germany, United States, United Kingdom, Canada, France, Australia, Sweden) were updated in September 2026 from Joshua Project’s undated tracked figures to more recent, dated diaspora estimates, after a presentation-deck consistency review (see Presentation_Consistency_Review.md) found the gap between this document and the CSG17 white papers’ own population tables could not be waved off as two sources counting different things. Checked directly: Joshua Project’s own per-country pages for this entry carry no year or source citation for any of these seven figures. Wikipedia’s “Afghan diaspora” article gives dated, sourced figures for the same seven countries, drawn from national census and statistics-office data. Germany’s documented growth trajectory is consistent with the well-known post-2021 surge in Afghan refugee and asylum arrivals across these same host countries, which most plausibly explains why Joshua Project’s undated figures read low across the board rather than measuring a genuinely different population. The other 14 countries in this table were not part of this review and remain straight Joshua Project figures as originally sourced (August 2026). This entry also still excludes ethnic Afghan populations in Iran and Pakistan, folded into the Pashtun/Hazara/Tajik/Uzbek entries above instead of this aggregate row.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-12">
-        <summary>
-          <span class="group-rank">12</span>
-          <span class="group-name">Telugu</span>
-          <span class="group-stats">1,758,800 across 13 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>India (no JP homeland row — see caveat) — ~81–96M general estimate, not a JP figure</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — O.V. Reference Bible (Bible Society of India), Indian Revised Version (2019).</dd></div>
-            <div><dt>Source</dt><dd>JP 15324; bible.com/languages/tel</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United Arab Emirates</td><td>Partially Reached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Saudi Arabia</td><td>Unreached</td></tr><tr><td>Myanmar</td><td>Minimally Reached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Australia</td><td>Partially Reached</td></tr><tr><td>Fiji</td><td>Partially Reached</td></tr><tr><td>Bahrain</td><td>Partially Reached</td></tr><tr><td>United Kingdom</td><td>Partially Reached</td></tr><tr><td>Mauritius</td><td>Unreached</td></tr><tr><td>Oman</td><td>Partially Reached</td></tr><tr><td>South Africa</td><td>Partially Reached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> India absent, same pattern as Gujarati/Hindi/Punjabi/Tamil. Four additional minor host countries (Finland, Ireland, Kuwait, Singapore) fall below JP’s reporting threshold and aren’t reflected in the total.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-13">
-        <summary>
-          <span class="group-rank">13</span>
-          <span class="group-name">Bosniak (Bosnian Muslim)</span>
-          <span class="group-stats">1,559,000 across 19 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Bosnia-Herzegovina — 1,566,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — “Biblija, Stari i Novi zavjet” (Bosnian Bible Translation Project, Sarajevo, 2013). A newer Today’s Bosnian Version (TBV) is a separate, still-in-progress contemporary-language translation.</dd></div>
-            <div><dt>Source</dt><dd>JP 10953; bible.com/languages/bos</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Germany</td><td>Unreached</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Serbia</td><td>Unreached</td></tr><tr><td>Türkiye</td><td>Frontier</td></tr><tr><td>Austria</td><td>Unreached</td></tr><tr><td>Canada</td><td>Frontier</td></tr><tr><td>Slovenia</td><td>Unreached</td></tr><tr><td>Montenegro</td><td>Unreached</td></tr><tr><td>Sweden</td><td>Unreached</td></tr><tr><td>Switzerland</td><td>Unreached</td></tr><tr><td>Italy</td><td>Unreached</td></tr><tr><td>Kosovo</td><td>Frontier</td></tr><tr><td>Croatia</td><td>Frontier</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Norway</td><td>Unreached</td></tr><tr><td>Hungary</td><td>Frontier</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>Denmark</td><td>Unreached</td></tr><tr><td>North Macedonia</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> “Bosniak” is JP’s ethnoreligious label for Muslim Bosnians specifically — ethnic Bosnian Serbs and Bosnian Croats (Orthodox/Catholic background) are tracked as separate JP groups, not included here. No major undercount flagged.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-14">
-        <summary>
-          <span class="group-rank">14</span>
-          <span class="group-name">Arab, Iraqi</span>
-          <span class="group-stats">1,387,800 across 20 countries &middot; NT Only (dialect) &middot; Complete Bible (Std. Arabic)</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Iraq — 21,512,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>New Testament only in Mesopotamian/Iraqi Arabic dialect (bible.com code acm). Complete Bible available in Modern Standard Arabic (e.g. Van Dyck Arabic Bible), in which most Iraqi Arabs are also literate.</dd></div>
-            <div><dt>Source</dt><dd>JP 12247; bible.com/languages/acm</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Germany</td><td>Unreached</td></tr><tr><td>Turkey</td><td>Unreached</td></tr><tr><td>United States</td><td>Superficially Reached</td></tr><tr><td>Sweden</td><td>Unreached</td></tr><tr><td>Canada</td><td>Superficially Reached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Syria</td><td>Unreached</td></tr><tr><td>United Arab Emirates</td><td>Unreached</td></tr><tr><td>Yemen</td><td>Unreached</td></tr><tr><td>Norway</td><td>Minimally Reached</td></tr><tr><td>Denmark</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Kuwait</td><td>Unreached</td></tr><tr><td>Belgium</td><td>Unreached</td></tr><tr><td>Lebanon</td><td>Unreached</td></tr><tr><td>Finland</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Algeria</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Jordan is entirely absent despite hosting a large Iraqi refugee population — a likely gap. Germany and Sweden figures may also be undercounts. JP tracks Iraqi Kurds, Assyrians/Chaldeans, and Turkmen as separate people groups.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-15">
-        <summary>
-          <span class="group-rank">15</span>
-          <span class="group-name">Thai (Central)</span>
-          <span class="group-stats">1,131,900 across 25 countries &middot; Complete Bible</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Thailand (Central Thai/Siamese only — see caveat) — 21,289,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>Complete Bible — Thai Standard Version 2011 (most widely used contemporary Protestant version); complete Bible in Thai since 1940.</dd></div>
-            <div><dt>Source</dt><dd>JP 11277; bible.com/languages/tha</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>United States</td><td>Unreached</td></tr><tr><td>Laos</td><td>Unreached</td></tr><tr><td>Malaysia</td><td>Unreached</td></tr><tr><td>Korea, South</td><td>Unreached</td></tr><tr><td>Taiwan</td><td>Unreached</td></tr><tr><td>Australia</td><td>Unreached</td></tr><tr><td>United Kingdom</td><td>Unreached</td></tr><tr><td>Singapore</td><td>Unreached</td></tr><tr><td>Sweden</td><td>Unreached</td></tr><tr><td>Indonesia</td><td>Unreached</td></tr><tr><td>Netherlands</td><td>Unreached</td></tr><tr><td>Germany</td><td>Unreached</td></tr><tr><td>Norway</td><td>Unreached</td></tr><tr><td>Canada</td><td>Unreached</td></tr><tr><td>China</td><td>Unreached</td></tr><tr><td>Denmark</td><td>Unreached</td></tr><tr><td>China, Hong Kong</td><td>Unreached</td></tr><tr><td>France</td><td>Unreached</td></tr><tr><td>Japan</td><td>Unreached</td></tr><tr><td>New Zealand</td><td>Unreached</td></tr><tr><td>Switzerland</td><td>Unreached</td></tr><tr><td>Finland</td><td>Unreached</td></tr><tr><td>Austria</td><td>Unreached</td></tr><tr><td>Saudi Arabia</td><td>Frontier</td></tr><tr><td>Italy</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> The Thailand row is Central Thai/Siamese only, not Thailand’s whole population — JP separately tracks Thai, Isan; Thai, Northern; Thai, Southern; and Phu Thai. Every country tracked, homeland included, is Unreached or Frontier.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-16">
-        <summary>
-          <span class="group-rank">16</span>
-          <span class="group-name">Pashtun, Northern</span>
-          <span class="group-stats">1,071,700 across 14 countries &middot; NT Only</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Afghanistan (Pakistan is shared homeland, not diaspora — see caveat) — 4,714,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>New-Testament-only in Afghan Pashto — Afghan Pashto Bible (APB); Old Testament still in progress. A complete Bible exists only in the related Pakistani Yousafzai Pashto dialect (PYPB, 2020), a different JP-tracked variant.</dd></div>
-            <div><dt>Source</dt><dd>JP 14256; bible.com/languages/ps; Wikipedia, “Bible translations into Pashto”</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Pakistan (shared homeland, not diaspora)</td><td>Unreached/Frontier</td></tr><tr><td>United Arab Emirates</td><td>Unreached/Frontier</td></tr><tr><td>Saudi Arabia</td><td>Unreached/Frontier</td></tr><tr><td>United States</td><td>Unreached/Frontier</td></tr><tr><td>United Kingdom</td><td>Unreached/Frontier</td></tr><tr><td>Canada</td><td>Unreached/Frontier</td></tr><tr><td>France</td><td>Unreached/Frontier</td></tr><tr><td>Germany</td><td>Unreached/Frontier</td></tr><tr><td>Türkiye</td><td>Unreached/Frontier</td></tr><tr><td>Denmark</td><td>Unreached/Frontier</td></tr><tr><td>Turkmenistan</td><td>Unreached/Frontier</td></tr><tr><td>Australia</td><td>Unreached/Frontier</td></tr><tr><td>Malaysia</td><td>Unreached/Frontier</td></tr><tr><td>Tajikistan</td><td>Unreached/Frontier</td></tr><tr><td>Russia</td><td>Unreached/Frontier</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Pakistan is excluded from the diaspora total by design — it is the indigenous Pashtun population of Khyber Pakhtunkhwa/FATA, split from Afghan Pashtuns by the colonial-era Durand Line, not a refugee/migrant population.</p>
-        </div>
-      </details>
-
-      <details class="group-block" id="group-17">
-        <summary>
-          <span class="group-rank">17</span>
-          <span class="group-name">Hazara</span>
-          <span class="group-stats">949,800 across 10 countries &middot; NT Only</span>
-        </summary>
-        <div class="group-body">
-          <dl class="group-facts">
-            <div><dt>Homeland</dt><dd>Afghanistan — 3,872,000</dd></div>
-            <div><dt>NT / Bible Status</dt><dd>New-Testament-only — Hazaragi Bible (HAZ, Wycliffe; distributed via Afghan Media Centre/Pamir Ministries). No complete Bible; Hazaragi speakers also have practical access to the complete Dari Bible (TDV) as a closely related dialect.</dd></div>
-            <div><dt>Source</dt><dd>JP 12076; bible.com/languages/haz</dd></div>
-          </dl>
-          <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Country</th><th>Status (JP)</th></tr></thead><tbody><tr><td>Iran</td><td>Unreached/Frontier</td></tr><tr><td>Pakistan</td><td>Unreached/Frontier</td></tr><tr><td>United Arab Emirates</td><td>Unreached/Frontier</td></tr><tr><td>Sweden</td><td>Unreached/Frontier</td></tr><tr><td>United States</td><td>Unreached</td></tr><tr><td>Türkiye</td><td>Unreached/Frontier</td></tr><tr><td>Australia</td><td>Unreached/Frontier</td></tr><tr><td>Austria</td><td>Unreached/Frontier</td></tr><tr><td>Canada</td><td>Unreached/Frontier</td></tr><tr><td>Indonesia</td><td>Unreached</td></tr></tbody></table></div>
-          <p class="group-caveat"><strong>Caveat:</strong> Hazaras are the most systematically persecuted Afghan ethnic/religious minority (Shia, targeted by the Taliban and ISIS-K). Iran and Pakistan figures should be treated as a floor, not a ceiling — real-world Hazara refugee/diaspora populations are widely reported as larger.</p>
-        </div>
-      </details>
-    </div>
+    <div class="study-table-wrap"><table class="study-table"><thead><tr><th>Rank</th><th>People Group</th><th>Homeland</th><th>Homeland Population</th><th>Diaspora Population</th><th># of Countries</th></tr></thead><tbody><tr><td>1</td><td>Uzbek, Northern</td><td>Uzbekistan</td><td>30,745,000</td><td>4,397,000</td><td>12</td></tr><tr><td>2</td><td>Hausa</td><td>Nigeria &amp; Niger</td><td>41,077,000 + 15,155,000 = 56,232,000</td><td>4,290,000</td><td>14</td></tr><tr><td>3</td><td>Persian</td><td>Iran</td><td>44,675,000</td><td>4,129,400</td><td>38</td></tr><tr><td>4</td><td>Tamil (Hindu traditions)</td><td>India</td><td>~72–77M general estimate</td><td>3,730,200</td><td>25</td></tr><tr><td>5</td><td>Tajik</td><td>Tajikistan</td><td>9,060,000</td><td>3,405,800</td><td>14</td></tr><tr><td>6</td><td>Gujarati</td><td>India</td><td>~46–49M general estimate</td><td>2,960,000</td><td>22</td></tr><tr><td>7</td><td>Hindi</td><td>India</td><td>~528M+ general estimate</td><td>2,795,500</td><td>16</td></tr><tr><td>8</td><td>Punjabi, Eastern</td><td>India, Punjab</td><td>~30M general estimate</td><td>2,064,400</td><td>21</td></tr><tr><td>9</td><td>Khmer</td><td>Cambodia</td><td>15,791,000</td><td>1,995,900</td><td>13</td></tr><tr><td>10</td><td>Japanese</td><td>Japan</td><td>117,111,000</td><td>1,940,200</td><td>37</td></tr><tr><td>11</td><td>Afghan, general</td><td>Afghanistan</td><td>—</td><td>1,878,100</td><td>21</td></tr><tr><td>12</td><td>Telugu</td><td>India</td><td>~81–96M general estimate</td><td>1,758,800</td><td>13</td></tr><tr><td>13</td><td>Bosniak (Bosnian Muslim)</td><td>Bosnia-Herzegovina</td><td>1,566,000</td><td>1,559,000</td><td>19</td></tr><tr><td>14</td><td>Arab, Iraqi</td><td>Iraq</td><td>21,512,000</td><td>1,387,800</td><td>20</td></tr><tr><td>15</td><td>Thai (Central)</td><td>Thailand</td><td>21,289,000</td><td>1,131,900</td><td>25</td></tr><tr><td>16</td><td>Pashtun, Northern</td><td>Afghanistan</td><td>4,714,000</td><td>1,071,700</td><td>14</td></tr><tr><td>17</td><td>Hazara</td><td>Afghanistan</td><td>3,872,000</td><td>949,800</td><td>10</td></tr></tbody></table></div>
   </div>
 </section>
 
 <section class="section-alt">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Worth Knowing</span>
-      <h2>A Recurring Data-Quality Pattern</h2>
-    </div>
-    <div class="reflection-box" style="max-width:900px;">
-      <p>Five groups (Gujarati, Hindi, Punjabi, Tamil, Telugu) have no homeland row at all in their Joshua Project entry — India’s population of each language is fragmented across dozens of caste- or community-specific people-group profiles instead of one aggregate row. Three groups (Pashtun, Tajik, Uzbek) have a large population counted under a differently-named JP entry rather than appearing where a search would naturally find it. Sri Lanka’s roughly 3.1 million Tamils are folded into three Sri Lanka-specific entries rather than the main Tamil profile. This is the same pattern the Afghan pilot first identified for Iran/Pakistan — worth checking for every group above before any one of them becomes the subject of a full Support-vs-Create or Content &amp; Channel pass.</p>
-      <p>The Afghan, general entry (§11) was the first in this list checked against current, dated diaspora estimates rather than Joshua Project’s tracked figures alone; 7 of its 21 host-country figures were corrected as a result (see that entry’s caveat and Presentation_Consistency_Review.md). Joshua Project’s own per-country pages for this entry carry no year or source for any figure, so the same undated-snapshot risk plausibly applies to some unknown share of the other 16 groups’ host-country figures above — this has not yet been checked group-by-group, and no other entry’s figures have been changed.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Where To Go From Here</span>
-      <h2>Suggested Next Step</h2>
-    </div>
-    <div class="card" style="max-width:760px;margin:0 auto;">
-      <p>This document stops at identification. When ready to move a specific group into the Afghan pilot’s next stage (a full Support-vs-Create table and a content/channel plan), the four highest-population groups with the least apparent existing digital outreach — Uzbek, Persian, Tamil, and Tajik — are the natural first candidates by scale alone; Punjabi is worth flagging separately despite its lower rank here, since its undercount (Sikh/Jat sub-entries not included above) likely makes it the largest true diaspora population in this entire list once corrected.</p>
-      <div class="priority-tags">
-        <span class="priority-tag">Uzbek, Northern</span>
-        <span class="priority-tag">Persian</span>
-        <span class="priority-tag">Tamil</span>
-        <span class="priority-tag">Tajik</span>
-        <span class="priority-tag">Punjabi, Eastern</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Sources</span>
-      <h2>Endnotes</h2>
-    </div>
-    <div class="endnotes">
-      <ol>
-        <li>Joshua Project (joshuaproject.net) people-group-in-country profiles, accessed August 2026 — IDs cited in each group’s “Source” line above: Uzbek, Northern (14039); Uzbek, Southern (15756); Hausa (12070); Persian (14371); Tamil, Hindu traditions (18211); Tajik (15201); Afghan, Tajik (14372); Gujarati (11982); Hindi (12106); Punjabi, Eastern (14483); Punjabi, Western (15382); Khmer (12662); Japanese (12322); Telugu (15324); Bosniak (10953); Arab, Iraqi (12247); Afghan, general (19314); Thai (11277); Pashtun, Northern (14256); Hazara (12076).</li>
-        <li>Freedom House, Freedom in the World, most recent published status (Free / Partly Free / Not Free) per country, freedomhouse.org, accessed August 2026. Where a country was not already scored elsewhere in this project, status is derived from the 0–100 aggregate score using this project’s own stated approximation (Executive_Summary_Method_Patterns_and_Definitions.docx §3): roughly 70+ = Free, 35–69 = Partly Free, below 35 = Not Free.</li>
-        <li>Afghan_Diaspora_Digital_Footprint_Pilot.docx, Moretti Missions Claude Project, August 2026 — source for the Afghan, general row and its Freedom House figures, reused as-is for consistency across this list.</li>
-        <li>Africa_Support_vs_Create.docx, Moretti Missions Claude Project, August 2026 — source for the Equatorial Guinea (5/100), Gabon (21/100), Congo Republic (17/100), and Central African Republic (5/100) Freedom House figures, reused as-is for the Hausa entry.</li>
-        <li>bible.com / YouVersion language and version pages, accessed August 2026, per language code cited in each group’s “NT / Bible status” line: uzn (Uzbek), hau (Hausa), pes (Persian), tam (Tamil), tgk (Tajik), guj (Gujarati), hin (Hindi), pan / pnb (Punjabi, Eastern / Western), khm (Khmer), jpn (Japanese), tel (Telugu), bos (Bosnian), acm (Mesopotamian/Iraqi Arabic), prs / tdv / apb (Dari / Pashto), tha (Thai), ps (Pashto), haz (Hazaragi).</li>
-        <li>Wikipedia, “Bible translations into Pashto” and “Bible translations into Uzbek,” accessed August 2026 — used to confirm Old Testament completion status where bible.com listings were ambiguous.</li>
-        <li>UNHCR refugee-population data and national census / community-estimate sources (via Wikipedia, accessed August 2026), used to flag likely undercounts in specific rows: Iranian Americans (US Census ACS 2011; CRS/PAAIA estimates); British Gujaratis; Jat Sikh population in Canada; Iraqis in Germany, Sweden, and Jordan.</li>
-        <li>Pacific_Australia_Support_vs_Create.docx, Moretti Missions Claude Project, August 2026 — original source flagging Afghan, Iraqi Arab, Hazaragi, Gujarati, Khmer, Bosnian, Japanese (Australia) and Hindi, Punjabi, Tamil, Telugu, Persian, Arab Iraqi, Thai (New Zealand) as unreached migrant/diaspora UPGs, which set the scope for this document.</li>
-        <li>Executive_Summary_Method_Patterns_and_Definitions.docx §4, Moretti Missions Claude Project — the “Diaspora / Homeland Missions” gap this document, together with the Afghan pilot, was commissioned to fill; also source for the Unreached and Frontier definitions used in the “Status (JP)” column throughout.</li>
-        <li>Wikipedia, “Afghan diaspora,” https://en.wikipedia.org/wiki/Afghan_diaspora, accessed September 2026 — source for the corrected Germany, United States, United Kingdom, Canada, France, Australia, and Sweden population figures in the Afghan, general entry (§11); see that entry’s caveat for the full comparison against Joshua Project’s undated figures for the same countries, and Presentation_Consistency_Review.md for the methodology this correction follows (first established for the Germany figure in the Afghan Content &amp; Channel Plan).</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section>
   <div class="container">
     <div class="card" style="max-width:640px;margin:0 auto;text-align:center;">
       <span class="tag">More Coming</span>
       <h3 style="margin-top:12px;">This vault will keep growing</h3>
-      <p>Additional diaspora groups, Support-vs-Create tables, and content &amp; channel plans will be added here as this research moves forward. Reach out through the contact page with questions.</p>
+      <p>Additional diaspora groups and content will be added here as this research moves forward. Reach out through the contact page with questions.</p>
       <a class="btn btn-primary" href="contact.html">Get In Touch</a>
     </div>
   </div>
