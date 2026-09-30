@@ -127,15 +127,52 @@
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">Who's Behind It</span>
-      <h2>Maintained by The Gospel Vault</h2>
+      <h2>Meet the Author</h2>
     </div>
-    <div class="card" style="max-width:640px;margin:0 auto;text-align:center;">
-      <!-- Draft bio placeholder — replace with your own story, background, and photo. -->
-      <p>The Gospel Vault is maintained out of a desire to make
-      scripture-rooted teaching available to anyone looking for a steady, honest place to grow in faith —
-      whether you're brand new to belief or have walked with Christ for years.</p>
-      <a class="btn btn-secondary" href="contact.html">Say Hello</a>
-    </div>
+    <!-- About the Author: card opens the full bio in a pop-up -->
+    <button type="button" class="card author-card" data-author-open="author-bio" aria-haspopup="dialog">
+      <span class="tag">About the Author</span>
+      <h3>B. R. Crow</h3>
+      <p>A layman, Bible college student, and lifelong outliner. Learn how the studies on this site
+      are built: the mentors behind them, the method, and how AI is (and isn't) used.</p>
+      <span class="author-more">Read the full bio &rarr;</span>
+    </button>
+
+    <dialog id="author-bio" class="author-dialog" aria-labelledby="author-bio-title">
+      <button type="button" class="author-close" aria-label="Close">&times;</button>
+      <div class="author-dialog-inner">
+        <span class="tag">About the Author</span>
+        <h2 id="author-bio-title">B. R. Crow</h2>
+
+        <p>TheGospelVault.com is designed and maintained by B. R. Crow. I am a layman with two years of
+        Bible college at Miami Christian College, and I have been blessed to have great pastors and
+        professors as mentors along the way. Much of what you'll find on this site grew out of their
+        teaching, including notes and files I've kept and studied over the years.</p>
+
+        <p>Is AI in use here? Yes, to some extent. For example, notes from more than 20 years ago have
+        been updated into a standardized format. Outlining has been part of my life for as long as I can
+        remember, in business and in teaching. Research was also central to my work in business, and it
+        has proven just as valuable in preparing new materials and adding to existing ones.</p>
+
+        <p>In some cases, material has been drawn from my mentors. One example is Dr. C. Norman Sellers,
+        ThD. In the study of Galatians, for instance, his sermon was transcribed into his outline to serve
+        as a commentary. The study method built around that core is how I was taught to prepare for a
+        study:</p>
+
+        <ul>
+          <li><strong>Devotional:</strong> essentially a rewriting of the passage in fresh words</li>
+          <li><strong>Word study:</strong> essential for a deeper understanding of the text</li>
+          <li><strong>Application:</strong> which is, after all, why we study and share</li>
+        </ul>
+
+        <p>Please enjoy the site. As always, your insights and feedback are welcome! You can also follow
+        us on Instagram at <a href="https://www.instagram.com/ijohn.316/" target="_blank" rel="noopener">@iJohn.316</a>.</p>
+
+        <p class="author-closing">In Him,<br>John 3:16<br>BRC</p>
+
+        <a class="btn btn-secondary" href="contact.html">Say Hello</a>
+      </div>
+    </dialog>
   </div>
 </section>
 
@@ -154,5 +191,20 @@
 </footer>
 
 <script src="js/nav.js"></script>
+<script>
+  (function () {
+    document.querySelectorAll('[data-author-open]').forEach(function (btn) {
+      var dlg = document.getElementById(btn.getAttribute('data-author-open'));
+      if (!dlg) return;
+      btn.addEventListener('click', function () {
+        if (typeof dlg.showModal === 'function') { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
+      });
+      dlg.querySelector('.author-close').addEventListener('click', function () {
+        if (dlg.close) { dlg.close(); } else { dlg.removeAttribute('open'); }
+      });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) { dlg.close(); } });
+    });
+  })();
+</script>
 </body>
 </html>
