@@ -1,0 +1,165 @@
+/*!
+ * The Gospel Vault — Reader Tools (styles)
+ * Text size (A− A A+), light/dark switch, and NASB95 verse popups.
+ * Loaded in <head> so a saved choice applies before the page paints.
+ */
+
+/* ---------- Text size ---------- */
+html[data-text="0"] { --tgv-zoom: 0.9; }
+html[data-text="2"] { --tgv-zoom: 1.1; }
+html[data-text="3"] { --tgv-zoom: 1.2; }
+html[data-text="4"] { --tgv-zoom: 1.35; }
+html[data-text] body > :not(.site-header):not(#tgv-reader):not(#scriptDiv):not(script):not(style) {
+  zoom: var(--tgv-zoom, 1);
+}
+
+/* ---------- Light theme ---------- */
+html[data-theme="light"] {
+  /* main site (css/style.css and white paper style.css files) */
+  --color-bg: #faf7ef;
+  --color-bg-alt: #f2ecdd;
+  --color-panel: #ffffff;
+  --color-gold: #8a6a1f;
+  --color-gold-light: #1f3864;
+  --color-cream: #16294a;
+  --color-cream-dim: #2b2b26;
+  --color-border: rgba(138, 106, 31, 0.28);
+  /* devotional pages */
+  --navy: #1f3864;
+  --navy-deep: #16294a;
+  --green: #375623;
+  --green-soft: #f0f4ee;
+  --parchment: #faf7ef;
+  --ink: #2b2b26;
+  --ink-soft: #565248;
+  --rule: #dcd5c2;
+  --gold: #a9832e;
+  /* panel pages */
+  --bg: #faf7ef;
+  --bg-alt: #f2ecdd;
+  --panel: #ffffff;
+  --gold-light: #1f3864;
+  --cream: #16294a;
+  --cream-dim: #2b2b26;
+  --border: rgba(138, 106, 31, 0.28);
+  color-scheme: light;
+}
+html[data-theme="light"] body { background: var(--color-bg); }
+html[data-theme="light"] .site-header { background: rgba(250, 247, 239, 0.94); }
+html[data-theme="light"] .main-nav .dropdown-menu,
+html[data-theme="light"] .jump-menu { box-shadow: 0 12px 28px rgba(31, 56, 100, 0.14); }
+html[data-theme="light"] a.card:hover { box-shadow: 0 10px 24px rgba(31, 56, 100, 0.12); }
+html[data-theme="light"] .readlink { color: #faf7ef !important; }
+html[data-theme="light"] .questions li::before { color: #faf7ef; }
+
+/* ---------- Dark theme ---------- */
+html[data-theme="dark"] {
+  --color-bg: #0f1a24;
+  --color-bg-alt: #16283a;
+  --color-panel: #1c3145;
+  --color-gold: #c9a24b;
+  --color-gold-light: #e3c987;
+  --color-cream: #f4efe4;
+  --color-cream-dim: #cfc7b4;
+  --color-border: rgba(201, 162, 75, 0.25);
+  --navy: #c9a24b;
+  --navy-deep: #e3c987;
+  --green: #c9a24b;
+  --green-soft: #1c3145;
+  --parchment: #0f1a24;
+  --ink: #cfc7b4;
+  --ink-soft: #a9a291;
+  --rule: rgba(201, 162, 75, 0.25);
+  --gold: #e3c987;
+  --bg: #0f1a24;
+  --bg-alt: #16283a;
+  --panel: #1c3145;
+  --gold-light: #e3c987;
+  --cream: #f4efe4;
+  --cream-dim: #cfc7b4;
+  --border: rgba(201, 162, 75, 0.25);
+  color-scheme: dark;
+}
+html[data-theme="dark"] body { background: #0f1a24; }
+html[data-theme="dark"] .readlink { color: #0f1a24 !important; }
+html[data-theme="dark"] .questions li::before { color: #0f1a24; }
+
+/* ---------- Toolbar ---------- */
+html[data-tgv-eff="dark"] {
+  --tgv-fg: #f4efe4; --tgv-dim: #cfc7b4; --tgv-accent: #e3c987;
+  --tgv-line: rgba(201, 162, 75, 0.35); --tgv-chip: #1c3145; --tgv-pill: rgba(15, 26, 36, 0.94);
+  --tgv-pop-bg: #16283a; --tgv-pop-head: #1c3145; --tgv-pop-text: #e9e3d3; --tgv-pop-link: #e3c987;
+  --tgv-shadow: rgba(0, 0, 0, 0.45);
+}
+html[data-tgv-eff="light"] {
+  --tgv-fg: #16294a; --tgv-dim: #565248; --tgv-accent: #8a6a1f;
+  --tgv-line: rgba(138, 106, 31, 0.35); --tgv-chip: #ffffff; --tgv-pill: rgba(250, 247, 239, 0.96);
+  --tgv-pop-bg: #ffffff; --tgv-pop-head: #1f3864; --tgv-pop-text: #2b2b26; --tgv-pop-link: #1f3864;
+  --tgv-shadow: rgba(31, 56, 100, 0.18);
+}
+
+#tgv-reader {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; line-height: 1;
+}
+#tgv-reader .tgv-sep { width: 1px; height: 20px; background: var(--tgv-line); margin: 0 4px; }
+#tgv-reader button {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 32px; padding: 0 8px; margin: 0;
+  border: 1px solid var(--tgv-line); border-radius: 4px; background: transparent;
+  color: var(--tgv-dim); font: inherit; font-size: 14px; letter-spacing: 0.04em; cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s;
+}
+#tgv-reader button:hover { color: var(--tgv-fg); border-color: var(--tgv-accent); }
+#tgv-reader button:focus-visible { outline: 2px solid var(--tgv-accent); outline-offset: 2px; }
+#tgv-reader button[aria-pressed="true"] { color: var(--tgv-accent); border-color: var(--tgv-accent); background: var(--tgv-chip); }
+#tgv-reader button:disabled { opacity: .4; cursor: default; }
+#tgv-reader button svg { width: 16px; height: 16px; }
+#tgv-reader .tgv-sm { font-size: 12px; }
+#tgv-reader .tgv-lg { font-size: 16px; font-weight: 600; }
+
+/* In the site header on wide screens */
+.site-header #tgv-reader { margin-left: 24px; }
+
+/* Floating pill: pages without a header, and every page on phones */
+#tgv-reader.tgv-float {
+  position: fixed; right: 16px; bottom: 16px; z-index: 900; margin: 0;
+  padding: 6px; border: 1px solid var(--tgv-line); border-radius: 8px;
+  background: var(--tgv-pill); box-shadow: 0 8px 24px var(--tgv-shadow);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+@media (max-width: 720px) {
+  #tgv-reader.tgv-float { right: 12px; bottom: 12px; }
+}
+
+/* ---------- Verse popup (Blue Letter Bible ScriptTagger) ---------- */
+html #scriptDiv #blbTagger.bubble {
+  background: var(--tgv-pop-bg) !important; color: var(--tgv-pop-text) !important;
+  border: 1px solid var(--tgv-line) !important; border-radius: 8px !important;
+  box-shadow: 0 14px 34px var(--tgv-shadow) !important; overflow: hidden;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif !important;
+  max-width: min(380px, calc(100vw - 32px));
+}
+html #scriptDiv #blbTagger .bubHead { background: var(--tgv-pop-head) !important; border: 0 !important; }
+html #scriptDiv #blbTagger .bubHead h6 {
+  color: #e3c987 !important; font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 15px !important; letter-spacing: 0.02em; text-transform: none !important;
+}
+html #scriptDiv #blbTagger .bubBody,
+html #scriptDiv #blbTagger .bubBody div {
+  background: transparent !important; color: var(--tgv-pop-text) !important;
+  font-size: 15px !important; line-height: 1.6 !important;
+}
+html #scriptDiv #blbTagger .bubBody a { color: var(--tgv-pop-link) !important; font-weight: 600; }
+html #scriptDiv #blbTagger .vRef { color: var(--tgv-accent) !important; font-weight: 600; }
+html #scriptDiv #blbTagger .blb-cta {
+  background: transparent !important; color: var(--tgv-dim) !important;
+  border-top: 1px solid var(--tgv-line) !important;
+}
+html #scriptDiv #blbTagger .blb-cta .blb-type,
+html #scriptDiv #blbTagger .blb-cta svg g { fill: currentColor !important; }
+
+@media print {
+  #tgv-reader, #scriptDiv { display: none !important; }
+  html[data-text] body > * { zoom: 1 !important; }
+}
