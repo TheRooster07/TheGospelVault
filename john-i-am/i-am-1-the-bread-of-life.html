@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Am the Bread of Life — John 6:35 | The I AM Statements | The Gospel Vault</title>
+<meta name="description" content="John — 7 I AMs: Just Who Is Jesus? — I Am the Bread of Life (John 6:35). A crowd chasing loaves meets the Bread that ends hunger for good.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --navy: #c9a24b;
+    --navy-deep: #e3c987;
+    --green: #c9a24b;
+    --green-soft: #1c3145;
+    --parchment: #0f1a24;
+    --ink: #cfc7b4;
+    --ink-soft: #cfc7b4;
+    --rule: rgba(201, 162, 75, 0.25);
+    --gold: #e3c987;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .marker__num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .marker__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin: 0 0 40px;
+  }
+
+  .keyverse {
+    background: var(--green-soft);
+    border-left: 4px solid var(--green);
+    padding: 22px 26px;
+    margin: 0 0 40px;
+    border-radius: 2px;
+  }
+  .keyverse__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .keyverse__text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--gold);
+    margin: 0;
+  }
+  .keyverse__cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: 'Source Serif 4', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--navy);
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+  }
+
+  .questions {
+    margin: 44px 0 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .questions h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .questions ol {
+    list-style: none;
+    counter-reset: q;
+    margin: 0;
+    padding: 0;
+  }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #0f1a24;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .readlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--navy);
+    color: #0f1a24 !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+  }
+  .readlink:hover { background: var(--navy-deep); }
+  .readlink svg { width: 15px; height: 15px; }
+
+  .readwrap {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .readwrap__caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  footer .brand {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  footer .brand a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .brand a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; }
+    .readlink { background: none; color: var(--navy) !important; padding: 0; }
+    footer .brand a { color: var(--ink-soft) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 60px; }
+  }
+
+  .backbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .backbar a { color: var(--gold); text-decoration: none; }
+  .backbar a:hover { text-decoration: underline; }
+
+  .chapternav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  .chapternav a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .chapternav a:hover { color: var(--navy-deep); text-decoration: underline; }
+  .chapternav__next { margin-left: auto; text-align: right; }
+
+  @media (max-width: 480px) {
+    .chapternav { flex-direction: column; gap: 10px; }
+    .chapternav__next { margin-left: 0; text-align: left; }
+  }
+
+  .slides { margin: 56px 0 40px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .slides h2 { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--navy); margin: 0 0 8px; }
+  .slides p.slides__note { font-size: 14px; color: var(--ink-soft); margin: 0 0 20px; }
+  .slides img { display: block; width: 100%; height: auto; border-radius: 4px; margin: 0 0 18px;
+    border: 1px solid var(--rule); }
+  .crosslink { margin: 0 0 40px; padding: 18px 22px; border: 1px solid var(--rule); border-radius: 3px; font-size: 15px; }
+  .crosslink span { display:block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 6px; }
+  .crosslink a { color: var(--gold); font-weight: 600; text-decoration: none; }
+  .crosslink a:hover { text-decoration: underline; }
+  @media print { .slides { display: none; } }
+</style>
+  <link rel="canonical" href="https://thegospelvault.com/john-i-am/i-am-1-the-bread-of-life.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Gospel Vault">
+  <meta property="og:url" content="https://thegospelvault.com/john-i-am/i-am-1-the-bread-of-life.html">
+  <meta property="og:title" content="I Am the Bread of Life — John 6:35 | The I AM Statements | The Gospel Vault">
+  <meta property="og:description" content="John — 7 I AMs: Just Who Is Jesus? — I Am the Bread of Life (John 6:35). A crowd chasing loaves meets the Bread that ends hunger for good.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I Am the Bread of Life — John 6:35 | The I AM Statements | The Gospel Vault">
+  <meta property="og:image" content="https://thegospelvault.com/assets/devotionals/John%20-%207%20I%20AMs/i-am-1-bread-of-life-1.png">
+  <meta name="twitter:image" content="https://thegospelvault.com/assets/devotionals/John%20-%207%20I%20AMs/i-am-1-bread-of-life-1.png">
+<link rel="stylesheet" href="../assets/reader-tools.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tgv-theme'),s=localStorage.getItem('tgv-text');if(t)d.setAttribute('data-theme',t);if(s)d.setAttribute('data-text',s)}catch(e){}</script>
+</head>
+<body>
+  <div class="page">
+    <div class="backbar"><a href="../vault-2-devotions.html">&larr; Devotions</a><a href="index.html">All 7 I AMs</a></div>
+
+    <div class="marker">
+      <span class="marker__num">I AM 1 of 7</span>
+      <span class="marker__line"></span>
+    </div>
+
+    <h1>I Am the Bread of Life</h1>
+    <p class="ref">John 6 &nbsp;&middot;&nbsp; The I AM Statements</p>
+
+    <div class="keyverse">
+      <p class="keyverse__label">Key Verse</p>
+      <p class="keyverse__text">&ldquo;I am the bread of life. He who comes to Me shall never hunger, and he who believes in Me shall never thirst.&rdquo;</p>
+      <span class="keyverse__cite">John 6:35</span>
+    </div>
+
+    <div class="body">
+      <p>The day after Jesus fed five thousand people with five loaves and two fish, the crowd tracks Him down on the other side of the lake — still thinking about their stomachs. Jesus sees straight through it: “You seek Me, not because you saw the signs, but because you ate of the loaves and were filled.” They ask what work God requires of them, expecting a list. Jesus gives them one line instead: “This is the work of God, that you believe in Him whom He sent” (v.29). Not labor. Not a ladder to climb. Belief. And then He tells them plainly who He actually is: “I am the bread of life. He who comes to Me shall never hunger, and he who believes in Me shall never thirst” (v.35).</p>
+      <p>Jesus contrasts Himself with the manna their ancestors ate in the wilderness — bread that fed the body for a single day and then had to be gathered all over again the next morning. “Your fathers ate the manna... and are dead,” He says, “but this is the bread which comes down from heaven, that one may eat of it and not die” (v.49–50). What He offers isn’t a daily wage for daily effort. It isn’t earned fresh each morning, and it doesn’t spoil if you fail to perform. The moment someone actually comes to Him and believes, the hunger is settled — permanently, not provisionally. The only thing required was never striving. It was receiving.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Questions to Carry</h2>
+      <ol>
+        <li>Jesus said the entire work God requires is simply to believe in the One He sent (v.29). Have you ever caught yourself treating faith like manna — something you have to keep re-gathering instead of something already given?</li>
+        <li>The crowd wanted another meal from Jesus more than they wanted Jesus Himself. Is there anything you find yourself chasing Him for more than you’re chasing Him?</li>
+        <li>Jesus promises that whoever comes to Him “shall never hunger” again — not maybe, not conditionally. Does your assurance of eternal life feel that settled, or does it still feel like something you have to keep proving?</li>
+      </ol>
+    </div>
+
+    <div class="readwrap">
+      <p class="readwrap__caption">Take time to read the full chapter today</p>
+      <a class="readlink" href="https://www.blueletterbible.org/nasb95/jhn/6/1/" target="_blank" rel="noopener">
+        Read John 6 on Blue Letter Bible
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="slides">
+      <h2>The Instagram Slides</h2>
+      <p class="slides__note">As posted on Instagram — swipe through in order. Save or share them freely.</p>
+      <img src="../assets/devotionals/John%20-%207%20I%20AMs/i-am-1-bread-of-life-1.png" width="1080" height="1080" loading="lazy" alt="The I AM Statements Instagram slide — I Am the Bread of Life (1 of 3)">
+      <img src="../assets/devotionals/John%20-%207%20I%20AMs/i-am-1-bread-of-life-2.png" width="1080" height="1080" loading="lazy" alt="The I AM Statements Instagram slide — I Am the Bread of Life (2 of 3)">
+      <img src="../assets/devotionals/John%20-%207%20I%20AMs/i-am-1-bread-of-life-3.png" width="1080" height="1080" loading="lazy" alt="The I AM Statements Instagram slide — I Am the Bread of Life (3 of 3)">
+    </div>
+
+    <div class="chapternav"><a class="chapternav__next" href="i-am-2-the-light-of-the-world.html">I AM 2: I Am the Light of the World &rarr;</a></div>
+
+    <footer>
+      THE GOSPEL VAULT &middot; JOHN — 7 I AMS: JUST WHO IS JESUS?
+      <span class="brand">&copy; <a href="https://thegospelvault.com" target="_blank" rel="noopener">TheGospelVault.com</a></span>
+    </footer>
+  </div>
+<script src="../assets/share-bar.js" defer></script>
+<script src="../assets/reader-tools.js" defer></script>
+</body>
+</html>
