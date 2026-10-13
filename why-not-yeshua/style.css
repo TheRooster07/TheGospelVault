@@ -130,7 +130,7 @@ p { margin: 0 0 1em; color: var(--color-cream-dim); }
 .commentary-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 .commentary-body h3 { color: var(--color-gold-light); font-size: 1.28rem; margin: 36px 0 14px; }
 .commentary-body h4 { color: var(--color-cream); font-size: 1.03rem; margin: 24px 0 10px; }
-.commentary-body h5 { color: var(--color-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 18px 0 8px; font-style: italic; }
+.commentary-body h5, .commentary-body h4.subhead { color: var(--color-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 18px 0 8px; font-style: italic; }
 
 .commentary-body blockquote {
   font-family: var(--font-heading); font-style: italic; color: var(--color-gold-light);
