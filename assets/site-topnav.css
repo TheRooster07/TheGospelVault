@@ -1,0 +1,13 @@
+/* Slim site bar for the standalone devotional/study pages */
+.gv-topnav {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 20px; padding: 12px 24px; background: #0B141C;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.25);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px;
+}
+.gv-topnav a { color: #F4EFE4; text-decoration: none; }
+.gv-topnav a:hover, .gv-topnav a:focus-visible { color: #E3C987; text-decoration: underline; }
+.gv-topnav .gv-brand { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 17px; color: #E3C987; }
+.gv-topnav .gv-brand span { color: #F4EFE4; }
+.gv-topnav ul { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; margin: 0; padding: 0; }
+@media print { .gv-topnav { display: none; } }

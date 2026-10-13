@@ -1,0 +1,40 @@
+/* ===========================================================
+   Site search — header search box (both header styles)
+   Results page styling lives in search.html.
+   =========================================================== */
+.nav-search { display: flex; align-items: center; }
+.nav-search form {
+  display: flex; align-items: center; margin: 0;
+  border: 1px solid var(--color-border, rgba(201, 162, 75, 0.35));
+  border-radius: 999px; overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.15s ease;
+}
+.nav-search form:focus-within { border-color: var(--color-gold-light, #E3C987); }
+.nav-search input {
+  -webkit-appearance: none; appearance: none;
+  border: 0; background: transparent; color: inherit; outline: none;
+  font: inherit; font-size: 0.88rem; line-height: 1.2;
+  padding: 6px 4px 6px 14px; width: 130px; min-width: 0;
+}
+.nav-search input::placeholder { color: inherit; opacity: 0.6; }
+.nav-search input::-webkit-search-cancel-button { display: none; }
+.nav-search button {
+  display: flex; align-items: center; cursor: pointer;
+  border: 0; background: transparent;
+  color: var(--color-gold, #c9a24b); padding: 6px 12px 6px 6px;
+}
+.nav-search button:hover,
+.nav-search button:focus-visible { color: var(--color-gold-light, #E3C987); }
+
+/* Slim top bar (study & devotional pages) is always dark */
+.gv-topnav ul { align-items: center; }
+.gv-topnav .nav-search input { color: #F4EFE4; }
+
+/* Mobile: full-width box inside the open ☰ menu / wrapped top bar */
+@media (max-width: 720px) {
+  .main-nav .nav-search, .main-nav .nav-search form { width: 100%; }
+  .main-nav .nav-search input { width: 100%; font-size: 1rem; }
+  .gv-topnav .nav-search input { width: 110px; }
+}
+@media print { .nav-search { display: none; } }
