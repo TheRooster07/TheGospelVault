@@ -132,6 +132,25 @@ html[data-tgv-eff="light"] {
   #tgv-reader.tgv-float { right: 12px; bottom: 12px; }
 }
 
+/* ---------- Verse reference links (Blue Letter Bible ScriptTagger, inline) ---------- */
+/* BLB's tagger wraps Scripture refs in the page text with class="BLBST_a" but
+   applies no color of its own -- left unstyled it renders as a plain blue
+   browser-default link, which clashes with every page's own accent color.
+   --tgv-accent is already set on every page by reader-tools.js (light or
+   dark), so this keeps verse refs matching the page's gold/navy accent and
+   easy to read, instead of looking like a leftover default link. */
+a.BLBST_a {
+  color: var(--tgv-accent) !important;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+a.BLBST_a:hover,
+a.BLBST_a:focus-visible {
+  text-decoration: none;
+  border-bottom-style: solid;
+}
+
 /* ---------- Verse popup (Blue Letter Bible ScriptTagger) ---------- */
 html #scriptDiv #blbTagger.bubble {
   background: var(--tgv-pop-bg) !important; color: var(--tgv-pop-text) !important;
