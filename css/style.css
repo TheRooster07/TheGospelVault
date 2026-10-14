@@ -1027,20 +1027,29 @@ textarea { resize: vertical; min-height: 130px; }
   }
 }
 .hero.hero--photo h1, .hero.hero--photo p.lead { text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
-.card { overflow: hidden; }
+/* Vault cards with a framed square photo (style C) */
+.card:has(.card-img) {
+  padding: 22px 22px 26px;
+  text-align: center;
+  background: linear-gradient(180deg, #203a52 0%, var(--color-panel) 100%);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.38);
+}
 .card .card-img {
   display: block;
-  width: calc(100% + 56px);
-  max-width: none;
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin: -28px -28px 20px;
-  border-bottom: 1px solid var(--color-border);
+  margin: 0 0 20px;
+  border: 1px solid rgba(201,162,75,0.55);
+  border-radius: 4px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
   filter: saturate(0.9);
-  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 .card .card-img--warm { filter: sepia(0.25) saturate(0.85) brightness(0.92); }
-a.card:hover .card-img { filter: saturate(1.05); }
+a.card:has(.card-img):hover { box-shadow: 0 16px 34px rgba(0,0,0,0.5); }
+a.card:hover .card-img { filter: saturate(1.05); transform: scale(1.015); }
 a.card:hover .card-img--warm { filter: sepia(0.2) saturate(1); }
 .photo-credit { font-size: 0.8rem; opacity: 0.7; }
