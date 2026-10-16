@@ -1053,3 +1053,42 @@ a.card:has(.card-img):hover { box-shadow: 0 16px 34px rgba(0,0,0,0.5); }
 a.card:hover .card-img { filter: saturate(1.05); transform: scale(1.015); }
 a.card:hover .card-img--warm { filter: sepia(0.2) saturate(1); }
 .photo-credit { font-size: 0.8rem; opacity: 0.7; }
+
+/* ---------- Vault 1 (The Gospel) photography — local Canva images ---------- */
+.hero.hero--photo.hero--gospel {
+  background:
+    linear-gradient(180deg, rgba(15,26,36,0.35) 0%, rgba(15,26,36,0.45) 55%, rgba(15,26,36,0.92) 100%),
+    url("../assets/vault-1/empty-tomb-sunrise-hero-2000.jpg") center 55% / cover no-repeat,
+    #1c3145;
+}
+@media (max-width: 700px) {
+  .hero.hero--photo.hero--gospel {
+    background:
+      linear-gradient(180deg, rgba(15,26,36,0.45) 0%, rgba(15,26,36,0.55) 55%, rgba(15,26,36,0.92) 100%),
+      url("../assets/vault-1/empty-tomb-sunrise-hero-900.jpg") 70% 55% / cover no-repeat,
+      #1c3145;
+  }
+}
+.verse-banner {
+  background:
+    linear-gradient(180deg, rgba(15,26,36,0.55) 0%, rgba(15,26,36,0.35) 50%, rgba(15,26,36,0.70) 100%),
+    url("../assets/vault-1/cross-hill-sunrise-1600.jpg") center 40% / cover no-repeat,
+    var(--color-bg-alt);
+  padding: 110px 0;
+}
+@media (max-width: 700px) {
+  .verse-banner {
+    background:
+      linear-gradient(180deg, rgba(15,26,36,0.6) 0%, rgba(15,26,36,0.45) 50%, rgba(15,26,36,0.75) 100%),
+      url("../assets/vault-1/cross-hill-sunrise-900.jpg") 30% 40% / cover no-repeat,
+      var(--color-bg-alt);
+    padding: 80px 0;
+  }
+}
+.verse-banner .card {
+  background: rgba(15,26,36,0.72);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-color: rgba(201,162,75,0.45);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.45);
+}
