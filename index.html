@@ -47,6 +47,16 @@
 <link rel="stylesheet" href="assets/reader-tools.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tgv-theme'),s=localStorage.getItem('tgv-text');if(t)d.setAttribute('data-theme',t);if(s)d.setAttribute('data-text',s)}catch(e){}</script>
 <link rel="stylesheet" href="assets/site-search.css">
+<style>
+  .latest-card { max-width: 760px; margin: 0 auto; text-align: center; }
+  .latest-list { list-style: none; margin: 0 0 24px; padding: 0; text-align: left; }
+  .latest-list li { display: grid; grid-template-columns: 4.5rem 13.5rem 1fr; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--color-border); }
+  .latest-list time { font-weight: 600; color: var(--color-gold-light); }
+  .latest-list .latest-tag { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-cream-dim); }
+  .latest-list a { color: var(--color-cream); text-decoration: none; font-weight: 600; }
+  .latest-list a:hover { color: var(--color-gold-light); }
+  @media (max-width: 640px) { .latest-list li { grid-template-columns: 4.5rem 1fr; } .latest-list a { grid-column: 1 / -1; } }
+</style>
 </head>
 <body>
 
@@ -61,6 +71,7 @@
             <summary>Vaults</summary>
             <ul class="dropdown-menu">
               <li><a href="vault.html">All Vaults</a></li>
+              <li><a href="updates.html">What's New</a></li>
               <li><a href="vault-1-gospel.html">Vault 1 — The Gospel</a></li>
               <li><a href="vault-2-devotions.html">Vault 2 — Devotions</a></li>
               <li><a href="vault-3-bible-studies.html">Vault 3 — NT Book Studies</a></li>
@@ -175,6 +186,45 @@
     </div>
   </div>
 </section>
+
+<section class="latest-updates">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Latest Updates</span>
+      <h2>New in the Vault</h2>
+    </div>
+    <div class="card latest-card">
+      <!-- These 5 items fill in automatically from updates.html when the page loads.
+           The list below is only a backup in case that can't load. -->
+      <ul class="latest-list" id="latest-list">
+        <li><time datetime="2026-10-12">Oct 12</time><span class="latest-tag">Vault 2 · Devotions</span><a href="john-i-am/index.html">John — 7 I AMs: Just Who Is Jesus?</a></li>
+        <li><time datetime="2026-10-12">Oct 12</time><span class="latest-tag">Vault 2 · Devotions</span><a href="john-seven-signs/index.html">John — 7 Signs: That You May Believe</a></li>
+        <li><time datetime="2026-10-09">Oct 9</time><span class="latest-tag">Vault 4 · OT Book Studies</span><a href="bible-studies/isaiah/index.html">Isaiah 1–66: Outline and Notes</a></li>
+        <li><time datetime="2026-10-08">Oct 8</time><span class="latest-tag">Vault 5 · Topical Studies</span><a href="israel-of-god/index.html">The Israel of God: Galatians 6:16</a></li>
+        <li><time datetime="2026-09-29">Sep 29</time><span class="latest-tag">Vault 5 · Topical Studies</span><a href="feasts-of-the-lord/index.html">The Feasts of the Lord Fulfilled in Christ</a></li>
+      </ul>
+      <a class="btn btn-secondary" href="updates.html">See All Updates</a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var list=document.getElementById('latest-list'); if(!list||!window.fetch||!window.DOMParser) return;
+  fetch('updates.html',{cache:'no-cache'}).then(function(r){return r.ok?r.text():Promise.reject();}).then(function(txt){
+    var doc=new DOMParser().parseFromString(txt,'text/html');
+    var src=[].slice.call(doc.querySelectorAll('.updates-list li')).slice(0,5); if(!src.length) return;
+    list.innerHTML='';
+    src.forEach(function(li){
+      var t=li.querySelector('time'), a=li.querySelector('h3 a'), g=li.querySelector('.tag'); if(!t||!a) return;
+      var row=document.createElement('li');
+      var tm=document.createElement('time'); tm.dateTime=t.getAttribute('datetime')||''; tm.textContent=t.textContent;
+      var tg=document.createElement('span'); tg.className='latest-tag'; tg.textContent=g?g.textContent:'';
+      var ln=document.createElement('a'); ln.href=a.getAttribute('href'); ln.textContent=a.textContent;
+      row.appendChild(tm); row.appendChild(tg); row.appendChild(ln); list.appendChild(row);
+    });
+  }).catch(function(){});
+})();
+</script>
 
 <section>
   <div class="container">
