@@ -15,6 +15,31 @@
  *   <meta name="verse-popups" content="off">     (popups only)
  * SKIP one area for popups: add class="noTag" to it.
  */
+/* ---------- Nav dropdowns: only one open at a time ----------
+ * Opening "Vaults" closes "About" (and vice versa). A click outside the
+ * menu, or the Esc key, closes any open dropdown. Runs even when the
+ * reader toolbar is turned off on a page.
+ */
+(function () {
+  "use strict";
+  function menus() { return document.querySelectorAll("li.dropdown > details"); }
+  function closeAll(except) {
+    var m = menus();
+    for (var i = 0; i < m.length; i++) if (m[i] !== except && m[i].open) m[i].open = false;
+  }
+  // "toggle" doesn't bubble, so listen in the capture phase.
+  document.addEventListener("toggle", function (e) {
+    var d = e.target;
+    if (d && d.open && d.matches && d.matches("li.dropdown > details")) closeAll(d);
+  }, true);
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest || !e.target.closest("li.dropdown > details")) closeAll(null);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAll(null);
+  });
+})();
+
 (function () {
   "use strict";
   var doc = document, root = doc.documentElement;
