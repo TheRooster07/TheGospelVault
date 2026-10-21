@@ -1092,3 +1092,19 @@ a.card:hover .card-img--warm { filter: sepia(0.2) saturate(1); }
   border-color: rgba(201,162,75,0.45);
   box-shadow: 0 14px 36px rgba(0,0,0,0.45);
 }
+
+/* ---------- Vault 5 (Topical Studies) hero photo ---------- */
+.hero.hero--photo.hero--topical {
+  background:
+    linear-gradient(180deg, rgba(15,26,36,0.40) 0%, rgba(15,26,36,0.50) 55%, rgba(15,26,36,0.92) 100%),
+    url("https://images.unsplash.com/photo-1535905557558-afc4877a26fc?auto=format&fit=crop&q=70&w=2000") center 45% / cover no-repeat,
+    #1c3145;
+}
+@media (max-width: 700px) {
+  .hero.hero--photo.hero--topical {
+    background:
+      linear-gradient(180deg, rgba(15,26,36,0.50) 0%, rgba(15,26,36,0.60) 55%, rgba(15,26,36,0.92) 100%),
+      url("https://images.unsplash.com/photo-1535905557558-afc4877a26fc?auto=format&fit=crop&q=70&w=900") center 45% / cover no-repeat,
+      #1c3145;
+  }
+}
