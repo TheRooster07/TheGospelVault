@@ -1053,6 +1053,37 @@ a.card:has(.card-img):hover { box-shadow: 0 16px 34px rgba(0,0,0,0.5); }
 a.card:hover .card-img { filter: saturate(1.05); transform: scale(1.015); }
 a.card:hover .card-img--warm { filter: sepia(0.2) saturate(1); }
 .photo-credit { font-size: 0.8rem; opacity: 0.7; }
+/* Card photo with historical caption: covers the card on hover/focus; sits under the photo on touch screens */
+a.card:has(.card-caption) { position: relative; overflow: hidden; }
+.card .card-figure { display: block; margin: 0 0 20px; }
+.card .card-figure .card-img { margin: 0; }
+.card .card-caption {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  padding: 28px 26px;
+  background: rgba(15,26,36,0.98);
+  border: 1px solid rgba(201,162,75,0.55); border-radius: inherit;
+  color: #f2ead8; font-size: 0.95rem; line-height: 1.55; text-align: left;
+  opacity: 0; transition: opacity 0.25s ease;
+  overflow: auto; pointer-events: none;
+}
+.card .card-caption strong {
+  display: block; color: #c9a24b;
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.card .card-caption::after {
+  content: "Open the study \2192"; margin-top: 4px;
+  color: #c9a24b; font-size: 0.8rem; font-weight: 600;
+}
+a.card:hover .card-caption, a.card:focus-visible .card-caption { opacity: 1; }
+@media (hover: none) {
+  .card .card-caption {
+    position: static; opacity: 0.85; margin-top: 10px;
+    background: none; border: 0; padding: 0;
+    color: inherit; font-size: 0.8rem; overflow: visible;
+  }
+  .card .card-caption::after { content: none; }
+}
 
 /* ---------- Vault 1 (The Gospel) photography — local Canva images ---------- */
 .hero.hero--photo.hero--gospel {
