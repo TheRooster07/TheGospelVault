@@ -83,6 +83,31 @@ html{scroll-padding-top:5.5rem}
   .io.d0{--lw:2.6rem}.io.d1{margin-left:1.2rem}.io.d2{margin-left:2.4rem}.io.d3{margin-left:3.4rem}.io.d4,.io.d5{margin-left:4.2rem}
   .io-tools input{width:100%}
 }
+/* Side chapter menu ("On this page") */
+.io-side{position:fixed;top:6rem;left:16px;z-index:45;width:228px;max-height:calc(100vh - 8rem);overflow-y:auto;padding:14px 14px 16px;background:var(--color-panel);border:1px solid var(--color-border);border-radius:4px;box-shadow:0 10px 26px rgba(0,0,0,.35);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s}
+.io-side-head{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-gold);margin-bottom:8px}
+.io-side-close{display:none;background:none;border:0;color:var(--color-cream-dim);font-size:1.4rem;line-height:1;cursor:pointer;padding:0 4px}
+.io-side-intro,.io-side-top{display:block;font-size:.85rem;color:var(--color-cream-dim);padding:4px 6px;border-radius:3px;border-left:2px solid transparent}
+.io-side-top{margin-top:12px}
+.io-side-part{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--color-gold-light);margin:14px 0 4px;padding-top:10px;border-top:1px solid var(--color-border)}
+.io-side-grp{margin:8px 0 0}
+.io-side-lab{display:block;font-size:.76rem;line-height:1.3;color:var(--color-cream-dim);margin-bottom:5px}
+.io-side-lab b{color:var(--color-cream)}
+.io-side-chips{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.io-side-chips a{text-align:center;font-size:.78rem;font-weight:600;font-variant-numeric:tabular-nums;padding:4px 0;border:1px solid var(--color-border);border-radius:3px;color:var(--color-cream)}
+.io-side a:hover,.io-side a:focus-visible{border-color:var(--color-gold);color:var(--color-gold-light);text-decoration:none}
+.io-side-intro.current{border-left-color:var(--color-gold);color:var(--color-gold-light)}
+.io-side-chips a.current{background:var(--color-gold);border-color:var(--color-gold);color:var(--color-bg)}
+.io-side-btn{position:fixed;left:16px;bottom:16px;z-index:46;font:inherit;font-size:.9rem;font-weight:600;color:var(--color-cream);background:var(--color-panel);border:1px solid var(--color-gold);border-radius:3px;padding:9px 14px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s}
+@media (min-width:1360px){
+  .io-side.show{opacity:1;visibility:visible}
+}
+@media (max-width:1359px){
+  .io-side-btn.show{opacity:1;visibility:visible}
+  .io-side{top:auto;bottom:66px;max-height:calc(100vh - 9rem);width:260px}
+  .io-side.open{opacity:1;visibility:visible}
+  .io-side-close{display:block}
+}
 </style>
 <link rel="stylesheet" href="../../assets/site-search.css">
 </head>
@@ -3942,6 +3967,42 @@ html{scroll-padding-top:5.5rem}
     out.innerHTML = hits ? h : '<p class="io-levels">No matches for “'+esc(q.value)+'”.</p>';
   }
   q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(run,250)});
+})();
+</script>
+<nav class="io-side" id="io-side" aria-label="Isaiah chapters">
+  <div class="io-side-head"><span>On this page</span><button type="button" class="io-side-close" aria-label="Close chapter menu">&times;</button></div>
+  <a class="io-side-intro" href="#introduction">Introduction</a>
+  <p class="io-side-part">Judgment &middot; Chapters 1&ndash;39</p>
+  <div class="io-side-grp"><span class="io-side-lab"><b>1&ndash;6</b> God&rsquo;s indictment of the nation</span><div class="io-side-chips"><a href="#isaiah-1">1</a><a href="#isaiah-2">2</a><a href="#isaiah-3">3</a><a href="#isaiah-4">4</a><a href="#isaiah-5">5</a><a href="#isaiah-6">6</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>7&ndash;12</b> Immanuel and the coming King</span><div class="io-side-chips"><a href="#isaiah-7">7</a><a href="#isaiah-8">8</a><a href="#isaiah-9">9</a><a href="#isaiah-10">10</a><a href="#isaiah-11">11</a><a href="#isaiah-12">12</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>13&ndash;23</b> Oracles against the nations</span><div class="io-side-chips"><a href="#isaiah-13">13</a><a href="#isaiah-14">14</a><a href="#isaiah-15">15</a><a href="#isaiah-16">16</a><a href="#isaiah-17">17</a><a href="#isaiah-18">18</a><a href="#isaiah-19">19</a><a href="#isaiah-20">20</a><a href="#isaiah-21">21</a><a href="#isaiah-22">22</a><a href="#isaiah-23">23</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>24&ndash;27</b> Judgment and triumph</span><div class="io-side-chips"><a href="#isaiah-24">24</a><a href="#isaiah-25">25</a><a href="#isaiah-26">26</a><a href="#isaiah-27">27</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>28&ndash;35</b> Woes and the promise</span><div class="io-side-chips"><a href="#isaiah-28">28</a><a href="#isaiah-29">29</a><a href="#isaiah-30">30</a><a href="#isaiah-31">31</a><a href="#isaiah-32">32</a><a href="#isaiah-33">33</a><a href="#isaiah-34">34</a><a href="#isaiah-35">35</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>36&ndash;39</b> Hezekiah&rsquo;s years</span><div class="io-side-chips"><a href="#isaiah-36">36</a><a href="#isaiah-37">37</a><a href="#isaiah-38">38</a><a href="#isaiah-39">39</a></div></div>
+  <p class="io-side-part">Restoration &middot; Chapters 40&ndash;66</p>
+  <div class="io-side-grp"><span class="io-side-lab"><b>40&ndash;48</b> Deliverance from Babylon</span><div class="io-side-chips"><a href="#isaiah-40">40</a><a href="#isaiah-41">41</a><a href="#isaiah-42">42</a><a href="#isaiah-43">43</a><a href="#isaiah-44">44</a><a href="#isaiah-45">45</a><a href="#isaiah-46">46</a><a href="#isaiah-47">47</a><a href="#isaiah-48">48</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>49&ndash;57</b> The Suffering Servant</span><div class="io-side-chips"><a href="#isaiah-49">49</a><a href="#isaiah-50">50</a><a href="#isaiah-51">51</a><a href="#isaiah-52">52</a><a href="#isaiah-52-13-53-12" title="Isaiah 52:13&ndash;53:12">53</a><a href="#isaiah-54">54</a><a href="#isaiah-55">55</a><a href="#isaiah-56">56</a><a href="#isaiah-57">57</a></div></div>
+  <div class="io-side-grp"><span class="io-side-lab"><b>58&ndash;66</b> God&rsquo;s restoration completed</span><div class="io-side-chips"><a href="#isaiah-58">58</a><a href="#isaiah-59">59</a><a href="#isaiah-60">60</a><a href="#isaiah-61">61</a><a href="#isaiah-62">62</a><a href="#isaiah-63">63</a><a href="#isaiah-64">64</a><a href="#isaiah-65">65</a><a href="#isaiah-66">66</a></div></div>
+  <a class="io-side-top" href="#chapters">Search the notes &uarr;</a>
+</nav>
+<button type="button" class="io-side-btn" id="io-side-btn" aria-controls="io-side" aria-expanded="false">&#9776; Chapters</button>
+<script>
+(function(){
+  var side=document.getElementById('io-side'),btn=document.getElementById('io-side-btn'),grid=document.getElementById('chapters');
+  if(!side||!btn||!grid) return;
+  var links={};[].forEach.call(side.querySelectorAll('a[href^="#"]'),function(a){links[a.getAttribute('href').slice(1)]=a;});
+  function onScroll(){var past=grid.getBoundingClientRect().bottom<80;side.classList.toggle('show',past);btn.classList.toggle('show',past);if(!past)close();}
+  function close(){side.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var o=side.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  side.querySelector('.io-side-close').addEventListener('click',close);
+  side.addEventListener('click',function(e){if(e.target.closest('a'))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  var cur=null;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var a=links[e.target.id];if(a&&a!==cur){if(cur)cur.classList.remove('current');a.classList.add('current');cur=a;if(side.classList.contains('show')&&!side.classList.contains('open')){var r=a.getBoundingClientRect(),sr=side.getBoundingClientRect();if(r.top<sr.top||r.bottom>sr.bottom)side.scrollTop+=r.top-sr.top-sr.height/2;}}}});},{rootMargin:'-30% 0px -65% 0px'});
+    [].forEach.call(document.querySelectorAll('section.io-chap'),function(sct){io.observe(sct);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
 </script>
 <script src="../../js/nav.js"></script>
