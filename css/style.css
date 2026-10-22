@@ -206,6 +206,8 @@ section { padding: 72px 0; }
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
 }
+/* Keep card width the same when a row has only one or two cards */
+.grid.grid--fill { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 
 .card {
   background: var(--color-panel);
