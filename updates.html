@@ -37,7 +37,13 @@
   "@type": "CollectionPage",
   "name": "What's New",
   "url": "https://thegospelvault.com/updates.html",
-  "isPartOf": { "@type": "WebSite", "name": "The Gospel Vault", "url": "https://thegospelvault.com/" }
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "The Gospel Vault",
+    "url": "https://thegospelvault.com/"
+  },
+  "dateModified": "2026-11-15",
+  "inLanguage": "en"
 }
 </script>
   <meta name="twitter:image" content="https://thegospelvault.com/assets/og-image.jpg">
@@ -59,6 +65,33 @@
   .updates-list p { margin: 0; color: var(--color-cream-dim); }
   @media (max-width: 520px) { .updates-list li { grid-template-columns: 1fr; gap: 4px; } }
 </style>
+<!-- tgv-icons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0f1a24">
+<!-- /tgv-icons -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegospelvault.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "What's New in the Vault",
+      "item": "https://thegospelvault.com/updates.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -532,6 +565,7 @@
     </nav>
     <p>Copyright &copy; 2026 The Gospel Vault. All Rights Reserved.</p>
   </div>
+<!--tgv-updated--><p class="tgv-updated" style="margin:.9rem auto 0;font-size:.8rem;opacity:.75;text-align:center;letter-spacing:.02em">Last updated <time datetime="2026-11-15">November 15, 2026</time></p><!--/tgv-updated-->
 </footer>
 
 <script src="js/nav.js"></script>

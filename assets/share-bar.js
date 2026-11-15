@@ -1,6 +1,8 @@
 /*!
  * The Gospel Vault — Share Bar
  * Adds Print/PDF, Facebook, X, Email, Copy link, Share, and WhatsApp
+ * buttons, then a separate "Follow The Gospel Vault" box (Instagram, X)
+ * linking to the ministry's own accounts. Original list:
  * buttons to the end of each article, plus a clean print layout.
  *
  * INSTALL: add one line before </body> on any page:
@@ -48,6 +50,8 @@
     link: "<svg " + S + stroke + '><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
     check: "<svg " + S + stroke + '><polyline points="20 6 9 17 4 12"/></svg>',
     share: "<svg " + S + stroke + '><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>',
+    instagram: "<svg " + S + stroke + '><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+    out: "<svg " + S + stroke + '><path d="M7 17 17 7"/><polyline points="8 7 17 7 17 16"/></svg>',
     whatsapp: "<svg " + S + stroke + '><path d="M3 21l1.65-4.6A9 9 0 1 1 8.4 19.6L3 21z"/><path d="M9 8.5c0 3.6 2.9 6.5 6.5 6.5l1-1.6-2-1-1 .9a4.6 4.6 0 0 1-2.3-2.3l.9-1-1-2L9 8.5z" fill="currentColor" stroke-width="1"/></svg>'
   };
 
@@ -65,9 +69,15 @@
     ".gv-share__status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}",
     ".gv-share--standalone{box-sizing:border-box;max-width:760px;margin:2.5rem auto 1.5rem;padding-left:16px;padding-right:16px}",
     ".gv-print-source{display:none}",
+    ".gv-follow{--gv-accent:var(--accent,var(--color-gold,var(--primary,#8a6d3b)));margin:1.25rem 0 0;padding:1rem 1.1rem;border:1px solid color-mix(in srgb,var(--gv-accent) 45%,transparent);border-radius:14px;background:color-mix(in srgb,var(--gv-accent) 7%,transparent);font-family:inherit}",
+    ".gv-follow__label{display:block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gv-accent);margin:0 0 .3rem;font-weight:600}",
+    ".gv-follow__note{margin:0 0 .75rem;font-size:.88rem;opacity:.8}",
+    ".gv-follow .gv-share__btn{border-color:color-mix(in srgb,var(--gv-accent) 60%,transparent)}",
+    ".gv-follow .gv-share__btn .gv-out{width:14px;height:14px;opacity:.7}",
+    ".gv-follow--standalone{box-sizing:border-box;max-width:760px;margin:0 auto 1.5rem}",
     "@media (max-width:480px){.gv-share__btn{padding:.45rem .75rem;font-size:.85rem}}",
     "@media print{",
-    "  .gv-share,nav,.no-print,button,[role=search],.site-nav,.menu,.controls{display:none!important}",
+    "  .gv-share,.gv-follow,nav,.no-print,button,[role=search],.site-nav,.menu,.controls{display:none!important}",
     "  html,body{background:#fff!important;color:#000!important}",
     "  body{font-size:12pt;line-height:1.5}",
     "  a{color:#000!important;text-decoration:none!important}",
@@ -177,6 +187,29 @@
 
   bar.appendChild(row);
   bar.appendChild(status);
+
+  // ---------- Follow The Gospel Vault (our own accounts — not a share) ----------
+  // To add Facebook later, remove the // in front of its line and put in the page address.
+  var FOLLOW = [
+    { key: "instagram", icon: "instagram", label: "Instagram \u00b7 @iJohn.316", href: "https://www.instagram.com/ijohn.316/" },
+    { key: "x-follow", icon: "x", label: "X \u00b7 @Bruzer", href: "https://x.com/Bruzer" }
+    // ,{ key: "facebook-follow", icon: "facebook", label: "Facebook", href: "https://www.facebook.com/YOUR-PAGE-NAME" }
+  ];
+  var follow = document.createElement("section");
+  follow.className = "gv-follow";
+  follow.setAttribute("aria-label", "Follow The Gospel Vault");
+  follow.innerHTML = '<span class="gv-follow__label">Follow The Gospel Vault</span>' +
+    '<p class="gv-follow__note">These buttons open The Gospel Vault\u2019s own pages \u2014 follow us for new devotionals and studies.</p>';
+  var frow = document.createElement("ul");
+  frow.className = "gv-share__row";
+  FOLLOW.forEach(function (f) {
+    var li = btn({ key: f.key, icon: f.icon, label: f.label, newTab: true, href: f.href,
+      aria: "Visit The Gospel Vault on " + f.label.split(" ")[0] + " (opens in a new tab)" });
+    li.firstChild.insertAdjacentHTML("beforeend", ICON.out.replace("<svg ", '<svg class="gv-out" '));
+    frow.appendChild(li);
+  });
+  follow.appendChild(frow);
+  bar.appendChild(follow);
 
   // Printed pages get the web address at the bottom
   var src = document.createElement("p");

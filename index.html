@@ -41,7 +41,18 @@
   "name": "The Gospel Vault",
   "url": "https://thegospelvault.com/",
   "description": "A home for scripture-rooted devotionals, reflections, and resources — inspiring faith through the Word.",
-  "slogan": "Inspiring Faith Through the Word"
+  "slogan": "Inspiring Faith Through the Word",
+  "@id": "https://thegospelvault.com/#organization",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://thegospelvault.com/assets/icons/icon-512.png",
+    "width": 512,
+    "height": 512
+  },
+  "sameAs": [
+    "https://www.instagram.com/ijohn.316/",
+    "https://x.com/Bruzer"
+  ]
 }
 </script>
 <link rel="stylesheet" href="assets/reader-tools.css">
@@ -57,6 +68,37 @@
   .latest-list a:hover { color: var(--color-gold-light); }
   @media (max-width: 640px) { .latest-list li { grid-template-columns: 4.5rem 1fr; } .latest-list a { grid-column: 1 / -1; } }
 </style>
+<!-- tgv-icons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0f1a24">
+<!-- /tgv-icons -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Inspiring Faith Through the Word",
+  "url": "https://thegospelvault.com/",
+  "inLanguage": "en",
+  "dateModified": "2026-11-15",
+  "image": "https://thegospelvault.com/assets/og-image.jpg",
+  "publisher": {
+    "@id": "https://thegospelvault.com/#organization",
+    "@type": "Organization",
+    "name": "The Gospel Vault",
+    "url": "https://thegospelvault.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thegospelvault.com/assets/icons/icon-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "description": "The Gospel Vault is a home for scripture-rooted devotionals, reflections, and resources — inspiring faith through the Word, one day at a time."
+}
+</script>
 </head>
 <body>
 
@@ -259,6 +301,7 @@
     <p>Copyright &copy; 2026 The Gospel Vault. All Rights Reserved.</p>
     <p class="photo-credit">Photography courtesy of <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
   </div>
+<!--tgv-updated--><p class="tgv-updated" style="margin:.9rem auto 0;font-size:.8rem;opacity:.75;text-align:center;letter-spacing:.02em">Last updated <time datetime="2026-11-15">November 15, 2026</time></p><!--/tgv-updated-->
 </footer>
 
 <script src="js/nav.js"></script>
