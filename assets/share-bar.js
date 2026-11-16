@@ -37,6 +37,26 @@
     meta('meta[property="og:description"]') || meta('meta[name="description"]');
 
   var u = encodeURIComponent(pageUrl);
+
+  // The post text for X: the title, then as much of the page's summary as fits.
+  // X allows 280 characters and counts every link as 23. Change XVIA to "" to drop the credit line.
+  var XVIA = "via @Bruzer";
+  function xText() {
+    var room = 280 - 23 - 2 - (XVIA ? XVIA.length + 2 : 0);
+    var title = pageTitle.replace(/\s+\|\s+The Gospel Vault$/, "");
+    var text = title;
+    if (pageDesc && pageDesc !== title) {
+      var left = room - title.length - 2;
+      var d = pageDesc;
+      if (d.length > left) {
+        d = d.slice(0, Math.max(0, left - 1));
+        var stop = Math.max(d.lastIndexOf(". "), d.lastIndexOf("? "), d.lastIndexOf("! "));
+        d = stop > 60 ? d.slice(0, stop + 1) : d.replace(/\s+\S*$/, "") + "\u2026";
+      }
+      if (left > 40) text += "\n\n" + d;
+    }
+    return XVIA ? text + "\n\n" + XVIA : text;
+  }
   var t = encodeURIComponent(pageTitle);
 
   // ---------- Icons (inline SVG, inherit text color) ----------
@@ -142,7 +162,7 @@
   }));
   row.appendChild(btn({
     key: "x", label: "X", aria: "Share on X", newTab: true,
-    href: "https://x.com/intent/post?url=" + u + "&text=" + t
+    href: "https://x.com/intent/post?url=" + u + "&text=" + encodeURIComponent(xText())
   }));
   row.appendChild(btn({
     key: "whatsapp", label: "WhatsApp", aria: "Share on WhatsApp", newTab: true,
