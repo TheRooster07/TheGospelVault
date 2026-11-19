@@ -225,6 +225,10 @@
         headers: { 'Accept': 'application/json' }
       }).then(function (response) {
         if (response.ok) {
+          // Analytics: count successful sends (marked as key events in Google Analytics)
+          if (typeof gtag === 'function') {
+            gtag('event', formId === 'signup-form' ? 'newsletter_signup' : 'contact_message');
+          }
           form.innerHTML = '<div class="notice">' + successMessage + '</div>';
         } else {
           submitBtn.disabled = false;
