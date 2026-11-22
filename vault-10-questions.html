@@ -344,11 +344,9 @@
 </section>
 
 <!-- ============================================================
-     ASK A QUESTION — private. Same Formspree endpoint as the
-     contact and idea forms; its own _subject line keeps it apart
-     in the dashboard. No name field. Reply contact is optional and
-     only shown when the visitor asks for a reply. _gotcha is
-     Formspree's spam honeypot.
+     ASK A QUESTION — the private Ask page (ask.html). Questions are
+     encrypted on the reader's device; answers already written show at
+     once; otherwise the reader gets a reference number to check back.
      ============================================================ -->
 <section id="ask">
   <div class="container">
@@ -356,40 +354,25 @@
       <span class="eyebrow">Ask Your Own</span>
       <h2>Ask a Question &mdash; Privately</h2>
     </div>
-    <p style="max-width:720px;margin:0 auto 20px;text-align:center;">Have a question about God, the Bible, or eternal life that isn&rsquo;t answered here? Send it below. You don&rsquo;t need to give your name.</p>
+    <p style="max-width:720px;margin:0 auto 20px;text-align:center;">Have a question about God, the Bible, or eternal life that isn&rsquo;t answered here? Ask it on our private question page. No name, email, or account is needed.</p>
+
+    <ol class="qa-privacy">
+      <li><strong>Ask.</strong> Type your question. If we have already answered it, you will see the answer from Scripture right away.</li>
+      <li><strong>Get a reference number.</strong> If not, you will receive a 6-character reference number. Write it down. It is random and is not linked to you in any way.</li>
+      <li><strong>Come back for your answer.</strong> In a few days, enter your number on the same page to read the answer we have prepared for you from Scripture.</li>
+    </ol>
 
     <ul class="qa-privacy">
-      <li><strong>Your question is never posted.</strong> It goes to a private inbox read only by The Gospel Vault. Nothing you send appears on this site.</li>
-      <li><strong>No name or account needed.</strong> A reply is optional. If you want one, give an email address or any other way to reach you that you choose.</li>
-      <li><strong>Your contact details are deleted after we reply.</strong> If your question helps us write a future answer, it will be reworded so no one could be identified.</li>
-      <li><strong>If you live where faith is watched,</strong> please don&rsquo;t use your real name, a work email, or details that identify you. A separate, private email address is safest.</li>
+      <li><strong>Locked before it leaves your device.</strong> Your question is encrypted on your own phone or computer before it is sent, then sent through a secure connection.</li>
+      <li><strong>Nothing that identifies you is kept.</strong> No name, location, internet address, device details, or time. The page uses no cookies, tracking, or outside services.</li>
+      <li><strong>Your question is never posted.</strong> It is deleted from our answer service once we download it to answer it. Any answer we publish is written in our own words so no one could be identified.</li>
+      <li><strong>A private reply is optional.</strong> You may leave an email if you would like one, but your reference number is enough. If you live where faith is watched, do not use your real name or a work email; a separate, private email address is safest.</li>
     </ul>
 
-    <form id="ask-form" action="https://formspree.io/f/mbgraalp" method="POST" style="max-width:640px;">
-      <input type="hidden" name="_subject" value="Question — Vault 10 Ask a Question">
-      <div class="qa-hp" aria-hidden="true">
-        <label for="ask-gotcha">Leave this field empty</label>
-        <input type="text" id="ask-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-      </div>
-      <div class="form-row">
-        <label for="ask-question">Your question</label>
-        <textarea id="ask-question" name="question" required maxlength="4000"></textarea>
-      </div>
-      <div class="form-row">
-        <label class="qa-check" for="ask-wants-reply">
-          <input type="checkbox" id="ask-wants-reply" name="wants_reply" value="yes">
-          <span>I&rsquo;d like a private reply</span>
-        </label>
-      </div>
-      <div class="form-row" id="ask-reply-row" hidden>
-        <label for="ask-reply-to">Reply to (email or any contact you choose)</label>
-        <input type="text" id="ask-reply-to" name="reply_to" autocomplete="off" maxlength="200">
-      </div>
-      <div class="form-row" style="text-align:center;">
-        <button type="submit" class="btn btn-primary">Send Question</button>
-        <p class="form-note">Leave the reply box unchecked to ask anonymously. We read every question.</p>
-      </div>
-    </form>
+    <p style="text-align:center;margin-top:24px;">
+      <a class="btn btn-primary" href="ask.html">Ask a Question</a>
+      <a class="btn btn-secondary" href="ask.html#check">Check for My Answer</a>
+    </p>
   </div>
 </section>
 
@@ -419,47 +402,6 @@
 </footer>
 
 <script src="js/nav.js"></script>
-<script>
-  // Show the reply box only when the visitor asks for a reply; clear it if they change their mind.
-  (function () {
-    var box = document.getElementById('ask-wants-reply');
-    var row = document.getElementById('ask-reply-row');
-    var field = document.getElementById('ask-reply-to');
-    if (!box || !row || !field) return;
-    box.addEventListener('change', function () {
-      row.hidden = !box.checked;
-      field.required = box.checked;
-      if (!box.checked) field.value = '';
-    });
-  })();
-
-  // Same Formspree + fetch() pattern as contact.html and submit-idea.html.
-  (function () {
-    var form = document.getElementById('ask-form');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var submitBtn = form.querySelector('button[type="submit"]');
-      var note = form.querySelector('.form-note');
-      submitBtn.disabled = true;
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
-        if (response.ok) {
-          form.innerHTML = '<div class="notice">Thank you &mdash; your question has been received. It will not be posted anywhere. If you asked for a reply, we&rsquo;ll write back to the contact you gave.</div>';
-        } else {
-          submitBtn.disabled = false;
-          if (note) note.textContent = "Something went wrong sending that — please try again in a few minutes.";
-        }
-      }).catch(function () {
-        submitBtn.disabled = false;
-        if (note) note.textContent = "Something went wrong sending that — please try again in a few minutes.";
-      });
-    });
-  })();
-</script>
 <script src="assets/share-bar.js" defer></script>
 <script src="assets/reader-tools.js" defer></script>
 </body>
