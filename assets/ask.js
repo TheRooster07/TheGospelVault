@@ -98,7 +98,16 @@
     if (data.found && data.answer) {
       html += answerHtml(data, "Answer from The Gospel Vault");
     } else if (data.ref) {
-      html += `<div class="refbox"><p><strong>Thank you for your question.</strong> We read every question and will prepare an answer from Scripture.</p>` +
+      if (data.quick) {
+        html += `<h2>Quick answer from our studies</h2>` +
+          data.quick.text.split(/\n\s*\n/).map((p, i) =>
+            `<p>${esc(p.trim())}</p>` + (data.quick.quotes || []).filter((v) => v.para === i).map(quote).join("")).join("") +
+          `<p class="quicknote">This short answer was prepared with AI help, using only The Gospel Vault's published studies. ` +
+          `A fuller answer, written and reviewed by The Gospel Vault, will be ready under your reference number below.</p>` +
+          (data.quick.sources?.length ? `<p class="quicknote">Read more in our studies: ` +
+            data.quick.sources.map((s) => link(s.url, s.title, true)).join(" · ") + `</p>` : "");
+      }
+      html += `<div class="refbox"><p><strong>Thank you for your question.</strong> ${data.quick ? "We read every question, and we will add a fuller answer from Scripture." : "We read every question and will prepare an answer from Scripture."}</p>` +
         `<p class="reflabel">Your reference number</p><p class="refcode" id="refcode">${esc(data.ref)}</p>` +
         `<p>Please <strong>write this number down</strong>. It is the only way to find your answer, because we do not keep anything that identifies you. ` +
         `Come back in a few days and enter it under <a href="#check">Check for your answer</a>.</p></div>`;
@@ -126,7 +135,7 @@
     const contact = $("wants-reply").checked ? $("contact").value.trim() : "";
     if (contact) payload.contact = contact;
     $("send").disabled = true;
-    $("answer").innerHTML = `<p class="notice">Looking for an answer…</p>`;
+    $("answer").innerHTML = `<p class="notice">Looking for an answer… this can take a few seconds.</p>`;
     render(await send(payload));
     $("send").disabled = false;
     $("answer").scrollIntoView({ behavior: "smooth", block: "start" });
